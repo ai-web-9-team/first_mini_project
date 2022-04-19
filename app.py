@@ -2,7 +2,6 @@ from flask import Flask, render_template
 
 
 
-
 app = Flask(__name__)
 
 # HTML 화면 보여주기
