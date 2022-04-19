@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6757bf13-0b4f-4cb8-818c-69dc98df2940" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/first-mini-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/first-mini-project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/jinyuing.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/jinyoung.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +110,7 @@
       <updated>1650349981222</updated>
       <workItem from="1650351686894" duration="5024000" />
       <workItem from="1650357666875" duration="315000" />
-      <workItem from="1650358040517" duration="287000" />
+      <workItem from="1650358040517" duration="694000" />
     </task>
     <servers />
   </component>
