@@ -1,11 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>원송희님의 페이지</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+
+    <style>
+    * {
+        font-family: 'Single Day', DXKorea Inc;
+    }
+
+    body {
+        padding: 20px;
+        background: black;
+    }
+
+    .myProfile {
+        width: 400px;
+        height: 500px;
+        perspective: 800px;
+        display:inline-block;
+        vertical-align:top;
+    }
+
+    .myProfile .item {
+        width: 400px;
+        height: 500px;
+        border: 1px solid #828282;
+        font-size: 35px;
+        backface-visibility: hidden;
+        transition: 1s;
+    }
+
+    .myProfile .item.front {
+        position: absolute;
+        transform: rotateY(0deg);
+    }
+
+    .myProfile:hover .item.front {
+        transform: rotateY(180deg);
+    }
+
+    .myProfile .item.back {
+        transform: rotateY(-180deg);
+    }
+
+    .myProfile:hover .item.back {
+        transform: rotateY(0deg);
+    }
+
+    .myInfo {
+        height: 500px;
+        display:inline-block;
+        margin: 0 0 0 50px;
+        color: white;
+    }
+
+    .blog {
+        background: white;
+        width: 108px;
+        animation: shake-horizontal;
+    }
+
+    .hashSwanVideo {
+        margin-top: 30px;
+    }
+
+    </style>
+
 </head>
+
 <body>
-songhee page
-<p>이거슨 커밋테스트다!!!!!</p>
+<div class="myProfile">
+    <div class="item front"><img
+            src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0cb3499b-cf0d-42a2-9a8d-12e508961406%2FKakaoTalk_20220418_160240348.jpg?table=block&id=aba2c27f-31cf-45a0-83d4-16b2bdee649f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=34873ddc-da24-4de9-a671-204842864bd3&cache=v2"
+            width=400 height=500></div>
+    <!--item back 이미지는 추후 수정해야함!-->
+    <div class="item back"><img
+            src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0cb3499b-cf0d-42a2-9a8d-12e508961406%2FKakaoTalk_20220418_160240348.jpg?table=block&id=aba2c27f-31cf-45a0-83d4-16b2bdee649f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=34873ddc-da24-4de9-a671-204842864bd3&cache=v2"
+            width=400 height=500 alt="img back"/></div>
+</div>
+<div class="myInfo">
+    <div>
+        <h1>간단 프로필</h1>
+        <div>
+            <p>
+            <li><B>이름: 원송희</B></li>
+            </p>
+            <p>
+            <li><B>MBTI: ENFP</B></li>
+            </p>
+            <p>
+            <li><B>블로그 주소: https://naeilbaeumdan-songheew.tistory.com/</B></li>
+            </p>
+            <div class="blog">
+                <p>
+                    <B>👉 <a href="https://naeilbaeumdan-songheew.tistory.com/" target="_blank">바로가기 👈</a></B>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hashSwanVideo">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ebBtjwENcxw" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+</div>
 </body>
 </html>
