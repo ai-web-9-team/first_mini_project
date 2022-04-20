@@ -1,12 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <!--    google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+
+
+    <title>김동우 소개 페이지</title>
+
+    <style>
+        * {
+            font-family: 'Dongle', sans-serif;
+        }
+
+       .mytitle {
+            width: 100%;
+            height: 250px;
+
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ytimg.com/vi/ElHf0dJykug/maxresdefault.jpg');
+            background-position: center;
+            background-size: cover;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .body-box {
+            /*background: green;*/
+            width: 1000px;
+
+            /*display: flex;*/
+            /*flex-direction: column;*/
+            /*align-items: center;*/
+            /*justify-content: center;*/
+
+            margin: 50px auto 50px auto;
+        }
+
+        .row1 {
+            width: 1000px;
+            /*background: red;*/
+            height: 400px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left {
+            width: 50%;
+            height: 100%;
+        }
+
+        .profile {
+            width: 80%;
+            height: 100%;
+            background-image: url("https://avatars.githubusercontent.com/u/68724828?v=4");
+            background-size: cover;
+            background-position: center;
+
+            border-radius: 20px;
+        }
+
+        .right {
+            /*background: red;*/
+            width: 40%;
+            height: 100%;
+        }
+
+        .sub_title{
+            font-weight: bold;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .person-info {
+            font-size: 30px;
+        }
+
+        .row2 {
+            width: 1000px;
+            /*background: red;*/
+            height: 250px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 50px;
+        }
+
+        .youtube {
+            width: 40%
+        }
+
+        .text-size {
+            font-size: 20px
+        }
+
+        .row3 {
+            width: 1000px;
+            /*background: red;*/
+            height: 400px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 50px;
+        }
+
+        .row4 {
+            width: 1000px;
+            /*background: red;*/
+            height: 700px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 50px;
+        }
+
+
+        .card-box {
+            margin: 50px auto 100px auto;
+            width: 1000px
+        }
+
+    </style>
+
+    <script>
+
+        $(document).ready(function () {
+
+        })
+
+    </script>
 </head>
 <body>
-doongwoo page
+    <div class="mytitle">
+        <h1>꾸러기 9조대</h1>
+    </div>
+    <div class="body-box">
 
-TEST MSG
+        <div class="row1">
+            <div class="left">
+                <div class="profile"></div>
+            </div>
+            <div class="right person-info">
+                <p class="sub_title">기 본 정 보</p>
+                <p>이름 : 김동우</p>
+                <p>MBTI : INTP</p>
+                <p>관심사 : 물리, 코딩, 알고리즘, 게임</p>
+                <p>취미 : 게임(롤, 로스트아크), 크로스핏</p>
+                <p>특징 : 붓글씨 잘씀</p>
+            </div>
+        </div>
+
+        <div class="row2">
+            <div class="left">
+                <div id="youtube" class="youtube">
+                <iframe width="400" height="220" src="https://www.youtube.com/embed/gbufWFSf250"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="right">
+                <p class="sub_title">내가 제일 좋아하는 노래</p>
+                <p class="person-info"> 쪽쪽 - 권진아 </p>
+                <p class="text-size">여름철 잠 못 이루게 하는 모기를 향한 아주 귀여운 노래!</p>
+            </div>
+        </div>
+
+        <div class="row3">
+            <div class="left">
+                <p class="sub_title">객관적으로 살펴본 나의 장점</p>
+                <p class="person-info">1. 이성적으로 분석하고 논리적인 사고를 잘한다!</p>
+                <p class="text-size">저는 어떤 현상을 이해할 때 감성적으로 접근하기보다는 이성적으로
+                    인과관계를 5확실히하고 제 3자의 입장에서 객관적으로 바라보려고 노력합니다. 이 점은
+                    어떤 문제점에 대해서 고민할 때 해결책을 찾거나 방향성을 제시하는 데 큰 도움이 됩니다.</p>
+                <p class="person-info">2. 동기부여는 나의 가장 큰 원동력!</p>
+                <p class="text-size">저에게 있어서 어떤 일을 할 때 가장 큰 원동력이 되는 것은 바로 '동기부여'입니다.
+                    그 일을 내가 왜 해야하는지 명확하게 알고있고 또 내가 하고싶어하는 일이라면 어떤
+                    어려운 일이라도 끝까지 해낼 수 있다고 자부합니다.</p>
+            </div>
+            <div class="right" align="right">
+                <img alt="" width="80%"  src="/static/images/31288698_1370862323046033_876359382072295424_n.jpg"/>
+            </div>
+        </div>
+
+        <div class="row4">
+            <div class="right"></div>
+            <div class="left">
+                <p class="sub_title">협업을 하는 과정에서의 자신의 스타일</p>
+                <p class="text-size">저는 협업을 하는데 가장 중요한 것은 의사소통이라고 생각합니다.</p>
+                <p class="person-info">1. 상대방의 입장을 생각해 보자!</p>
+                <p class="text-size">저는 여러 사람들과 의견을 주고받을 때 상대방의 입장을 먼저 생각해보는 편입니다.
+                    상대가 누군지에 따라 내가 가진 생각을 어떻게 표현을 해야 온전히 전달될 수 있을 지 파악하는게 중요하다고 생각합니다.</p>
+                <p class="person-info">2. 정확하게 파악하고 확실하게 표현하자!</p>
+                <p class="text-size">상대방의 의견을 들을 때는 내가 이해하고 있는 것이 맞는지 다시 한번 확인하고
+                    나의 생각을 이야기할 때는 제대로 이해했는지 다시 한번 확인하는 편입니다.</p>
+                <p class="person-info">3. 누가 들어도 이해할 수 있도록 쉽게 설명하자!</p>
+                <p class="text-size">제가 존경하는 인물인 물리학자 리처드 파인만은 어떤 어려운 개념도 일반인이 이해할 수 있을 정도로
+                    쉽게 설명하는데 탁월했습니다. 어릴적부터 그의 책을 읽으며 그의 설명방식이나 말하는 법을 배우고자 노력했고 덕분에
+                    저 또한 어려운 일도 쉽게 풀어서 설명하고 해결하는 능력을 기를 수 있었습니다.</p>
+
+
+            </div>
+        </div>
+        <p></p>
+    </div>
+
+    </div>
+    <div class="card-deck card-box">
+        <div class="card">
+            <img class="card-img-top"
+                 src="https://avatars.githubusercontent.com/u/103986068?s=400&u=f38774e17d7484d4ea93c0844471f1db51c62b3d&v=4"
+                 alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">김희정</h5>
+                <a class="card-text" href="/heejeong">팀원 소개 바로 가기</a>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">kimphysicsman</small>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top"
+                 src="https://avatars.githubusercontent.com/u/103986068?s=400&u=f38774e17d7484d4ea93c0844471f1db51c62b3d&v=4"
+                 alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">전진영</h5>
+                <a class="card-text" href="/jinyoung">팀원 소개 바로 가기</a>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">kimphysicsman</small>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top"
+                 src="https://avatars.githubusercontent.com/u/103986068?s=400&u=f38774e17d7484d4ea93c0844471f1db51c62b3d&v=4"
+                 alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">원송희</h5>
+                <a class="card-text" href="/songhee">팀원 소개 바로 가기</a>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">kimphysicsman</small>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
