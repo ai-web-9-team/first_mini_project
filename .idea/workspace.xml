@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6757bf13-0b4f-4cb8-818c-69dc98df2940" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dongwoo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dongwoo.html" afterDir="false" />
-    </list>
+    <list default="true" id="6757bf13-0b4f-4cb8-818c-69dc98df2940" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +110,7 @@
       <workItem from="1650358040517" duration="1066000" />
       <workItem from="1650366402802" duration="9000" />
       <workItem from="1650412042574" duration="35000" />
-      <workItem from="1650420425446" duration="12185000" />
+      <workItem from="1650420425446" duration="12676000" />
     </task>
     <servers />
   </component>
