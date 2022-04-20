@@ -3,52 +3,136 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>원송희님의 페이지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SONGFLIX</title>
+
+    <link rel="icon" href="https://blog.kakaocdn.net/dn/brBCoz/btrzYir31Vp/SyK2YsGeApVae2t9vsZ7A0/img.png">
+
+    <!--넷플릭스같이 보이게 해주는 이모티콘들인듯..?-->
+    <script src="https://kit.fontawesome.com/c7adb7b803.js" crossorigin="anonymous"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
 
     <style>
+
     * {
         font-family: 'Single Day', DXKorea Inc;
     }
 
-    body {
-        padding: 20px;
-        background: black;
-    }
+.header{
+    height: 100px;
+}
 
-    .myProfile {
+.header_container{
+    display: flex;
+    align-items: center;
+}
+.logo, .main_nav, .sub_nav{
+    flex: 0 0 auto;
+}
+
+.main_nav{
+    display: flex;
+    align-items: center;
+}
+
+.sub_nav{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header_container{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+    color: #ddddff;
+    font-size: 2rem;
+}
+
+.logo{
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 3rem;
+    width: 30pix;
+    height: 30pix;
+}
+
+.logo a img{
+    height: 1.5em;
+}
+
+.logo .header_toggleBtn{
+    display: none;
+}
+
+.main_nav .main_nav_tab{
+    padding-left: 1rem;
+}
+
+.sub_nav .sub_nav_tab{
+    padding-right: 1rem;
+}
+
+    html,
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(10,10,10);
+    font-size: 16px;
+}
+
+li, ul{
+    margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;
+}
+ul{
+    list-style: none;
+}
+
+    .myPic {
         width: 400px;
         height: 500px;
         perspective: 800px;
+        padding-top: 20px;
+        padding-left: 35px;
         display:inline-block;
         vertical-align:top;
     }
 
-    .myProfile .item {
+    .myPic .item {
         width: 400px;
         height: 500px;
-        border: 1px solid #828282;
-        font-size: 35px;
+        border: 1px solid black;
+
         backface-visibility: hidden;
         transition: 1s;
     }
 
-    .myProfile .item.front {
+.myPic .item.front {
         position: absolute;
         transform: rotateY(0deg);
     }
 
-    .myProfile:hover .item.front {
+    .myPic:hover .item.front {
         transform: rotateY(180deg);
     }
 
-    .myProfile .item.back {
+    .myPic .item.back {
         transform: rotateY(-180deg);
     }
 
-    .myProfile:hover .item.back {
+    .myPic:hover .item.back {
         transform: rotateY(0deg);
     }
 
@@ -57,24 +141,44 @@
         display:inline-block;
         margin: 0 0 0 50px;
         color: white;
+        font-size: 30px;
     }
 
-    .blog {
-        background: white;
-        width: 108px;
-        animation: shake-horizontal;
-    }
 
-    .hashSwanVideo {
-        margin-top: 30px;
-    }
 
     </style>
-
 </head>
 
 <body>
-<div class="myProfile">
+<div class="header">
+    <div class="header_container">
+        <div class="logo">
+            <a href="">
+                <img src="https://blog.kakaocdn.net/dn/ekLMNM/btrzWsu8C4w/AFKGAVdSWR7Cy89fXEOEMK/img.png" alt="NETFLIX">
+            </a>
+            <button class="header_toggleBtn"><i class="fa fa-bars"></i></button>
+        </div>
+        <ul class="main_nav">
+            <li class="main_nav_tab">홈</li>
+            <li class="main_nav_tab">TV 프로그램</li>
+            <li class="main_nav_tab">영화</li>
+            <li class="main_nav_tab">최신 콘텐츠</li>
+            <li class="main_nav_tab">내가 찜한 콘텐츠</li>
+        </ul>
+        <ul class="sub_nav">
+            <li class="sub_nav_tab"><i class="fas fa-search"></i></li>
+            </li>
+            <li class="sub_nav_tab">키즈</li>
+            <li class="sub_nav_tab"><i class="fas fa-gift"></i></li>
+            <li class="sub_nav_tab"><i class="fas fa-bell"></i></li>
+            <li class="sub_nav_tab"><i class="fas fa-user"></i></li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="myPic">
     <div class="item front"><img
             src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0cb3499b-cf0d-42a2-9a8d-12e508961406%2FKakaoTalk_20220418_160240348.jpg?table=block&id=aba2c27f-31cf-45a0-83d4-16b2bdee649f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=34873ddc-da24-4de9-a671-204842864bd3&cache=v2"
             width=400 height=500></div>
@@ -94,21 +198,17 @@
             <li><B>MBTI: ENFP</B></li>
             </p>
             <p>
-            <li><B>블로그 주소: https://naeilbaeumdan-songheew.tistory.com/</B></li>
+            <li><B>취미: 롤, 애니메이션 감상, 노래 듣기</B></li>
             </p>
-            <div class="blog">
-                <p>
-                    <B>👉 <a href="https://naeilbaeumdan-songheew.tistory.com/" target="_blank">바로가기 👈</a></B>
-                </p>
-            </div>
+            <p>
+            <li><B>좋아하는 연예인: </B></li>
+            </p>
+            <p>
+            <li><B>블로그 주소: https://naeilbaeumdan-songheew.tistory.com/&ensp;
+            👉&ensp; <a href="https://naeilbaeumdan-songheew.tistory.com/" target="_blank">바로가기</a></B></li></p>
         </div>
     </div>
 </div>
-<div class="hashSwanVideo">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ebBtjwENcxw" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-</div>
 </body>
+
 </html>
