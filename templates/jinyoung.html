@@ -32,21 +32,19 @@
             font-family: 'Dongle', sans-serif;
         }
 
+        body {
+            padding: 20px;
+            background: whitesmoke;
+        }
+
         .body-box {
-            /*background: green;*/
+
             width: 1000px;
-
-            /*display: flex;*/
-            /*flex-direction: column;*/
-            /*align-items: center;*/
-            /*justify-content: center;*/
-
             margin: 50px auto 50px auto;
         }
 
         .row1 {
             width: 1000px;
-            /*background: red;*/
             height: 400px;
 
             display: flex;
@@ -79,7 +77,6 @@
 
         .row2 {
             width: 1000px;
-            /*background: red;*/
             height: 250px;
 
             display: flex;
@@ -89,9 +86,11 @@
 
             margin-top: 50px;
         }
+
         .youtube {
             width: 40%
         }
+
         .box {
             width: 150px;
             height: 150px;
@@ -110,6 +109,17 @@
 
 </head>
 <body>
+<input id="night_day" type="button" value="night" onclick="
+if (document.querySelector('#night_day').value === 'night'){
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+  document.querySelector('#night_day').value = 'day';
+}  else {
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color = 'black';
+  document.querySelector('#night_day').value = 'night';
+}
+">
 <div class="body-box">
     <div class="row1">
         <div class="left">
@@ -119,9 +129,10 @@
         <div class="right person-info">
             <p>이름 : 전진영</p>
             <p>MBTI : ISFP</p>
-            <p>관심사 : 게임</p>
-            <p>취미 : 게임(롤, 스타크래프트2), 음악듣기</p>
-            <p>특징 : </p>
+            <p>관심사 : 게임, 여행</p>
+            <p>취미 : 게임(롤, 스타크래프트2), 음악듣기, 해외여행다니기</p>
+            <p>특징 : 코로나 전엔 매달 비행기 타고다닌 여행광</p>
+            <p>블로그 : <a href="https://jjy7546.tistory.com/">https://jjy7546.tistory.com/</a></p>
         </div>
     </div>
 
@@ -140,7 +151,7 @@
         <div class="center"></div>
         <div class="right person-info">
             <p>내가 좋아하는 노래 : The Weeknd - Out of Time</p>
-            <p>이유 : </p>
+            <p>이유 : 레트로한 분위기에 빠져들 수 있는 노래</p>
         </div>
         </iv>
     </div>
@@ -180,19 +191,19 @@
 <div>
     <div class="wrap person-info">
         <div style="float: left; width: 10%;">
-            <a href="https://www.naver.com/" target="_blank">
-                <img class="box" src="bn.png">
-                <p class="profile-name"> 김동우</p></a>
+            <a href="/dongwoo">
+                <img class="box" src="/static/images/dongwoo.png">
+                <span style="text-align:center; display:inline-block; width:150px">김동우</span></a>
         </div>
         <div style="float: left; width: 10%;">
-            <a href="https://www.naver.com/" target="_blank">
-                <img class="box" src="bn.png">
-                <p class="profile-name">김희정</pre></a>
-        </div style=" float: left; width: 10%;">
-        <div>
-            <a href="https://www.naver.com/" target="_blank">
-                <img class="box" src="bn.png">
-                <p class="profile-name">원송희</p></a>
+            <a href="/heejeong">
+                <img class="box" src="/static/images/heejeong.png">
+                <span style="text-align:center; display:inline-block; width:150px">김희정</span></a>
+        </div>
+        <div style=" float: left; width: 10%;">
+            <a href="/songhee">
+                <img class="box" src="/static/images/songhee.png">
+                <span style="text-align:center; display:inline-block; width:150px">원송희</span></a>
         </div>
     </div>
 </div>
