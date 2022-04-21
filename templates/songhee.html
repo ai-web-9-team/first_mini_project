@@ -32,14 +32,10 @@
     return 0
     }
 
-<<<<<<< Updated upstream
-=======
 
 
 
 
-
->>>>>>> Stashed changes
     </SCRIPT>
 
 
@@ -190,10 +186,7 @@ ul{
         font-size: 30px;
     }
 
-<<<<<<< Updated upstream
-    .lolInfo {
-        margin-top: 500px;
-=======
+
     .blank {
         height: 500px;
     }
@@ -203,15 +196,14 @@ ul{
         margin: 0px;
         height: 500px;
         color: white;
-        font-size: 23px;
+        font-size: 25px;
         display: inline;
->>>>>>> Stashed changes
     }
 
     .lolInfoIntro {
         color: white;
         font-size: 30px;
-        padding-top: 90px;
+        padding-top: 30px;
     }
 
     .blank2 {
@@ -229,37 +221,44 @@ ul{
         margin-top: 50px;
     }
 
+    .playlistInfo2 {
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+
+    .blank3 {
+        height: 500px;
+    }
+
+
+
+
+
     </style>
 
-<<<<<<< Updated upstream
-    <script>
-    $(document).ready(function() {
-        $('#lolbutton').bind('click', function() {
-            var offset = $("#lol-info").offset();
-            $('html, body').animate({scrollTop: offset.top}, 500);
-        });
-}
 
-        function playList() {
-            alert("PlayList!");
-        }
-=======
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 
     <script>
 
-	$(document).ready(function(){
-		$('#lolbutton').click(function(){
-			var offset = $('#loldiv').offset();
-	        $('html').animate({scrollTop : offset.top}, 600);
-		});
-	});
+   $(document).ready(function(){
+      $('#lolbutton').click(function(){
+         var offset = $('#loldiv').offset();
+           $('html').animate({scrollTop : offset.top}, 600);
+      });
+   });
+
+   $(document).ready(function(){
+      $('#playlistbutton').click(function(){
+         var offset = $('#playlistdiv').offset();
+           $('html').animate({scrollTop : offset.top}, 600);
+      });
+   });
 
 
 
 
 
->>>>>>> Stashed changes
 
     </script>
 </head>
@@ -279,7 +278,7 @@ ul{
             <button class="lol" id="lolbutton" onmouseover="this.style.fontWeight='bold'"
                     onmouseout="this.style.fontWeight=''">LoL 전적
             </button>
-            <button class="playlist" onclick="playList()" onmouseover="this.style.fontWeight='bold'"
+            <button class="playlist" id="playlistbutton" onmouseover="this.style.fontWeight='bold'"
                     onmouseout="this.style.fontWeight=''">플레이리스트
             </button>
 
@@ -290,9 +289,12 @@ ul{
             <li class="sub_nav_tab">
                 <SCRIPT LANGUAGE=JAVASCRIPT TYPE="TEXT/JAVASCRIPT">
 document.write("Total <font color=red>"+hitCt+" </font>")
-                </SCRIPT>
-            </li>
 
+
+
+
+
+                </SCRIPT>
             </li>
         </ul>
 
@@ -334,9 +336,6 @@ document.write("Total <font color=red>"+hitCt+" </font>")
     </div>
     <div class="lolInfo" id="lol-info">
         <p>{{result}}</p>
-    </div>
-    <div class="playlistInfo">
-        <p>여기는 노래 플레이리스트 크롤링 후 넣을 것</p>
     </div>
 </div>
 <div class="blank">
@@ -398,18 +397,33 @@ document.write("Total <font color=red>"+hitCt+" </font>")
 <div class="blank2">
 
 </div>
-<div class="playlistInfoIntro">
-        <p>
-        <CENTER><B>제 페이보릿 플레이리스트입니다!</CENTER>
-        </B></p>
-    </div>
+<div class="playlistInfoIntro" id="playlistdiv">
+    <p>
+    <CENTER><B>제 페이보릿 플레이리스트입니다!</CENTER>
+    </B></p>
+</div>
 <div class="playlistInfo">
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ebBtjwENcxw" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qsMDdMEo8uU" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/G4Hb00s3j40" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+</div>
+<div class="playlistInfo2">
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/V1DwngIg9HU" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SMemB8qejtk" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
@@ -418,6 +432,8 @@ document.write("Total <font color=red>"+hitCt+" </font>")
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
 </div>
-</body>
+<div class="blank3">
 
+</div>
+</body>
 </html>
