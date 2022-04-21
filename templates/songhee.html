@@ -9,9 +9,6 @@
 
     <link rel="icon" href="https://blog.kakaocdn.net/dn/brBCoz/btrzYir31Vp/SyK2YsGeApVae2t9vsZ7A0/img.png">
 
-    <!--넷플릭스같이 보이게 해주는 이모티콘들인듯..?-->
-    <script src="https://kit.fontawesome.com/c7adb7b803.js" crossorigin="anonymous"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
@@ -35,6 +32,14 @@
     return 0
     }
 
+<<<<<<< Updated upstream
+=======
+
+
+
+
+
+>>>>>>> Stashed changes
     </SCRIPT>
 
 
@@ -185,13 +190,48 @@ ul{
         font-size: 30px;
     }
 
+<<<<<<< Updated upstream
     .lolInfo {
         margin-top: 500px;
+=======
+    .blank {
+        height: 500px;
     }
 
+    .lolInfo {
+        width: 100%;
+        margin: 0px;
+        height: 500px;
+        color: white;
+        font-size: 23px;
+        display: inline;
+>>>>>>> Stashed changes
+    }
+
+    .lolInfoIntro {
+        color: white;
+        font-size: 30px;
+        padding-top: 90px;
+    }
+
+    .blank2 {
+        height: 500px;
+    }
+
+    .playlistInfoIntro {
+        color: white;
+        font-size: 30px;
+        padding-top: 90px;
+    }
+
+    .playlistInfo {
+        margin-left: 100px;
+        margin-top: 50px;
+    }
 
     </style>
 
+<<<<<<< Updated upstream
     <script>
     $(document).ready(function() {
         $('#lolbutton').bind('click', function() {
@@ -203,6 +243,23 @@ ul{
         function playList() {
             alert("PlayList!");
         }
+=======
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+
+	$(document).ready(function(){
+		$('#lolbutton').click(function(){
+			var offset = $('#loldiv').offset();
+	        $('html').animate({scrollTop : offset.top}, 600);
+		});
+	});
+
+
+
+
+
+>>>>>>> Stashed changes
 
     </script>
 </head>
@@ -281,6 +338,85 @@ document.write("Total <font color=red>"+hitCt+" </font>")
     <div class="playlistInfo">
         <p>여기는 노래 플레이리스트 크롤링 후 넣을 것</p>
     </div>
+</div>
+<div class="blank">
+
+</div>
+
+<div class="lolInfo" id="loldiv">
+    <div class="lolInfoIntro">
+        <p>
+        <CENTER><B>제 최근 15게임의 전적입니다!</CENTER>
+        </B></p>
+    </div>
+    <p>
+    <CENTER>{{game1}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game2}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game3}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game4}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game5}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game6}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game7}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game8}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game9}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game10}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game11}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game12}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game13}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game14}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game15}}</CENTER>
+    </p>
+</div>
+<div class="blank2">
+
+</div>
+<div class="playlistInfoIntro">
+        <p>
+        <CENTER><B>제 페이보릿 플레이리스트입니다!</CENTER>
+        </B></p>
+    </div>
+<div class="playlistInfo">
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ebBtjwENcxw" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/G4Hb00s3j40" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7tgIc4iTt_M" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
 </div>
 </body>
 
