@@ -4,7 +4,7 @@
 
 .mytitle {
     width: 100%;
-    height: 250px;
+    height: 150px;
 
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c0d816b2-70fd-4507-a49c-2faadd059b2b/dciwqeq-595ccd60-6536-4619-bc44-7baa8d7ec0ce.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MwZDgxNmIyLTcwZmQtNDUwNy1hNDljLTJmYWFkZDA1OWIyYlwvZGNpd3FlcS01OTVjY2Q2MC02NTM2LTQ2MTktYmM0NC03YmFhOGQ3ZWMwY2UucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._Rzlmz5ti3E0-2jCFsIcTGr6lVq9dObuD_DB7_jIOME');
     background-position: center;
@@ -15,7 +15,8 @@
     align-items: center;
     justify-content: center;
 
-    position: relative;
+    position: fixed;
+    top: 0px;
 }
 
 .row1 {
@@ -30,12 +31,13 @@
     justify-content: center;
 
     margin: auto;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 .left {
     width: 50%;
     height: 100%;
+    /*background-color: red;*/
 }
 
 .profile {
@@ -114,7 +116,8 @@
 .game-img {
     width: 80%;
     height: 350px;
-    background-image: url("https://velog.velcdn.com/images/kimphysicsman/post/1a598ff5-6cd6-4342-8f65-ebcde88bed81/image.png");
+    background-image: url('../images/mokoko.png');
+    /*background-image: url("https://velog.velcdn.com/images/kimphysicsman/post/1a598ff5-6cd6-4342-8f65-ebcde88bed81/image.png");*/
     background-size: cover;
     background-position: center center;
 
@@ -125,7 +128,9 @@
 .calli-img{
     width: 80%;
     height: 100%;
-    background-image: url("https://velog.velcdn.com/images/kimphysicsman/post/d08f4508-5cac-4053-b3ed-b72f44569b19/image.png");
+
+    background-image: url('../images/calligraphy.png');
+    /*background-image: url("https://velog.velcdn.com/images/kimphysicsman/post/d08f4508-5cac-4053-b3ed-b72f44569b19/image.png");*/
     background-size: cover;
     background-position: center center;
 
@@ -146,30 +151,54 @@
     justify-content: space-between;
 }
 
-.btn4::before {
-  content: '';
-  position: absolute;
-  bottom: 0%;
-  left: 0px;
-  width: 100%;
-  height: 1px;
-  background: #6098FF;
-  display: block;
-  -webkit-transform-origin: right top;
-  -ms-transform-origin: right top;
-  transform-origin: right top;
-  -webkit-transform: scale(0, 1);
-  -ms-transform: scale(0, 1);
-  transform: scale(0, 1);
-  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
-  transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+.row5 {
+    width: 1400px;
+    /*background: red;*/
+    height: 400px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+    margin-bottom: 100px;
 }
 
-.btn4:hover::before {
-  -webkit-transform-origin: left top;
-  -ms-transform-origin: left top;
-  transform-origin: left top;
-  -webkit-transform: scale(1, 1);
-  -ms-transform: scale(1, 1);
-  transform: scale(1, 1)
+.game-char{
+    width: 400px;
+    height: 100%;
+    background-image: url("https://velog.velcdn.com/images/kimphysicsman/post/d1c4dc71-bb9b-4e9d-acbf-86d9a0efa60f/image.png");
+    background-size: cover;
+    background-position: center center;
+
+    border-radius: 20px;
+    /*margin-top: 50px;*/
+}
+
+.game-char-info{
+    width: 600px;
+    height: 100%
+}
+
+.width10 {
+    width: 10%;
+    /*background-color: blue;*/
+}
+
+.width100 {
+    width: 100px;
+    /*background-color: blue;*/
+}
+
+.char-sub-title{
+    width: 400px
+}
+
+.container-box2 {
+    width: 80%;
+    height: 70%;
+    /*background-color: blue;*/
+    /*margin: auto;*/
+    margin-top: 50px;
 }
