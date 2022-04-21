@@ -9,8 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -95,91 +96,6 @@
             font-size: 25px;
         }
 
-        .slider {
-            width: 640px;
-            height: 480px;
-            position: relative;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .slider input[type=radio] {
-            display: none;
-        }
-
-        ul.imgs {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
-
-        ul.imgs li {
-            position: absolute;
-            left: 640px;
-            transition-delay: 1s; /* 새 슬라이드가 이동해 오는 동안 이전 슬라이드 이미지가 배경이 보이도록 지연 */
-
-            padding: 0;
-            margin: 0;
-        }
-
-        .bullets {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 20px;
-            z-index: 2;
-        }
-
-        .bullets label {
-            display: inline-block;
-            border-radius: 50%;
-            background-color: rgba(0, 0, 0, 0.55);
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-        }
-
-        /* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
-        .slider input[type=radio]:nth-child(1):checked ~ .bullets > label:nth-child(1) {
-            background-color: #fff;
-        }
-
-        .slider input[type=radio]:nth-child(2):checked ~ .bullets > label:nth-child(2) {
-            background-color: #fff;
-        }
-
-        .slider input[type=radio]:nth-child(3):checked ~ .bullets > label:nth-child(3) {
-            background-color: #fff;
-        }
-
-        .slider input[type=radio]:nth-child(4):checked ~ .bullets > label:nth-child(4) {
-            background-color: #fff;
-        }
-
-        .slider input[type=radio]:nth-child(1):checked ~ ul.imgs > li:nth-child(1) {
-            left: 0;
-            transition: 0.5s;
-            z-index: 1;
-        }
-
-        .slider input[type=radio]:nth-child(2):checked ~ ul.imgs > li:nth-child(2) {
-            left: 0;
-            transition: 0.5s;
-            z-index: 1;
-        }
-
-        .slider input[type=radio]:nth-child(3):checked ~ ul.imgs > li:nth-child(3) {
-            left: 0;
-            transition: 0.5s;
-            z-index: 1;
-        }
-
-        .slider input[type=radio]:nth-child(4):checked ~ ul.imgs > li:nth-child(4) {
-            left: 0;
-            transition: 0.5s;
-            z-index: 1;
-        }
-
         .row2 {
             width: 1000px;
             height: 250px;
@@ -202,13 +118,15 @@
             border-radius: 70%;
             overflow: hidden;
         }
-
         .wrap {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
             margin-top: 20px;
+        }
+        .content img {
+            width: 100px;
         }
     </style>
 
@@ -244,24 +162,18 @@
         </div>
     </div>
     <hr>
-    <div>
-        <div class="slider">
-            <input type="radio" name="slide" id="slide1" checked>
-            <input type="radio" name="slide" id="slide2">
-            <input type="radio" name="slide" id="slide3">
-            <input type="radio" name="slide" id="slide4">
-            <ul id="imgholder" class="imgs">
-                <li><img src="./static/img/slide1.jpg"></li>
-                <li><img src="./static/img/slide2.jpg"></li>
-                <li><img src="./static/img/slide3.jpg"></li>
-                <li><img src="./static/img/slide4.jpg"></li>
-            </ul>
-            <div class="bullets">
-                <label for="slide1">&nbsp;</label>
-                <label for="slide2">&nbsp;</label>
-                <label for="slide3">&nbsp;</label>
-                <label for="slide4">&nbsp;</label>
-            </div>
+    <div class="row1">
+        <h1>여행 사진 :</h1>
+        <div class="fotorama"
+             data-width="600"
+             data-height="360"
+             data-allowfullscreen="true"
+             data-nav="thumbs"
+             data-autoplay="true">
+            <img src="/static/img/slide1.jpg" data-caption=""/>
+            <img src="/static/img/slide2.jpg" data-caption=""/>
+            <img src="/static/img/slide3.jpg" data-caption=""/>
+            <img src="/static/img/slide4.jpg" data-caption=""/>
         </div>
     </div>
     <hr>
