@@ -114,7 +114,8 @@
 .game-img {
     width: 80%;
     height: 350px;
-    background-image: url("https://velog.velcdn.com/images/kimphysicsman/post/1a598ff5-6cd6-4342-8f65-ebcde88bed81/image.png");
+    background-image: url('/static/images/calligraphy.png');
+    /*background-image: url("https://velog.velcdn.com/images/kimphysicsman/post/1a598ff5-6cd6-4342-8f65-ebcde88bed81/image.png");*/
     background-size: cover;
     background-position: center center;
 
@@ -125,7 +126,9 @@
 .calli-img{
     width: 80%;
     height: 100%;
-    background-image: url("https://velog.velcdn.com/images/kimphysicsman/post/d08f4508-5cac-4053-b3ed-b72f44569b19/image.png");
+
+    background-image: url('/static/images/calligraphy.png');
+    /*background-image: url("https://velog.velcdn.com/images/kimphysicsman/post/d08f4508-5cac-4053-b3ed-b72f44569b19/image.png");*/
     background-size: cover;
     background-position: center center;
 
@@ -161,7 +164,7 @@
 }
 
 .game-char{
-    width: 40%;
+    width: 400px;
     height: 100%;
     background-image: url("https://velog.velcdn.com/images/kimphysicsman/post/d1c4dc71-bb9b-4e9d-acbf-86d9a0efa60f/image.png");
     background-size: cover;
@@ -172,6 +175,20 @@
 }
 
 .game-char-info{
-    width: 60%;
+    width: 600px;
     height: 100%
+}
+
+.width10 {
+    width: 10%;
+    /*background-color: blue;*/
+}
+
+.width100 {
+    width: 100px;
+    background-color: blue;
+}
+
+.char-sub-title{
+    width: 400px
 }

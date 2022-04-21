@@ -36,6 +36,7 @@
     <script>
 
         $(document).ready(function () {
+            game_char_info()
         })
 
         function move_info() {
@@ -61,6 +62,17 @@
         function move_members() {
             var offset = $("#my-members").offset(); //해당 위치 반환
             $('html, body').animate({scrollTop : offset.top}, 400);
+        }
+
+        function game_char_info() {
+            $.ajax({
+                type: 'GET',
+                url: '/dongwoo/game',
+                data: {},
+                success: function (response) {
+                    console.log(response)
+                }
+            })
         }
 
     </script>
@@ -90,6 +102,7 @@
                 <p>특징 : 붓글씨 잘씀</p>
                 <p>블로그 : <a href="https://velog.io/@kimphysicsman">https://velog.io/@kimphysicsman</a></p>
             </div>
+            <div class="width10"></div>
         </div>
 
         <div class="row2">
@@ -106,23 +119,25 @@
                 <p class="person-info"> 쪽쪽 - 권진아 </p>
                 <p class="text-size">여름철 잠 못 이루게 하는 모기를 향한 아주 귀여운 노래!</p>
             </div>
+            <div class="width10"></div>
         </div>
 
         <div class="row5">
-
+            <div class="width100"></div>
+            <div class="width100"></div>
             <div class="game-char"></div>
             <div class="width100"></div>
             <div class="game-char-info">
-                <div class="person-info font-white game-char-info">
-                    <p class="sub_title" id="my-info" style="color: gray;">캐 릭 터 정 보</p>
+                <p class="sub_title char-sub-title" id="my-info" >캐 릭 터 정 보</p>
+                <div class="person-info font-white">
                     <p>ID : </p>
                     <p>직업 : </p>
-                    <p>서버 : </p>
-                    <p>취미 : </p>
+                    <p>서버/길드 : </p>
+                    <p>레벨/랭킹 : </p>
                     <p>로아와 : <a href="https://loawa.com/char/바람의나라에서온모험가">https://loawa.com/char/바람의나라에서온모험가</a></p>
             </div>
             </div>
-
+            <div class="width100"></div>
         </div>
 
         <div class="row3">
