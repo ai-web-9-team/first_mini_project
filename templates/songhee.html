@@ -9,12 +9,39 @@
 
     <link rel="icon" href="https://blog.kakaocdn.net/dn/brBCoz/btrzYir31Vp/SyK2YsGeApVae2t9vsZ7A0/img.png">
 
-    <!--넷플릭스같이 보이게 해주는 이모티콘들인듯..?-->
-    <script src="https://kit.fontawesome.com/c7adb7b803.js" crossorigin="anonymous"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+
+
+    <!--total 기능을 위한 부분!-->
+    <SCRIPT LANGUAGE=JAVASCRIPT TYPE="TEXT/JAVASCRIPT">
+    expireDate = new Date
+    expireDate.setMonth(expireDate.getMonth()+6)
+    hitCt = eval(cookieVal("pageHit"))
+    hitCt++
+    document.cookie = "pageHit="+hitCt+";expires=" + expireDate.toGMTString()
+
+    function cookieVal(cookieName) {
+    thisCookie = document.cookie.split("; ")
+    for (i=0; i<thisCookie.length; i++) {
+    if (cookieName == thisCookie[i].split("=")[0]) {
+    return thisCookie[i].split("=")[1]
+    }
+    }
+    return 0
+    }
+
+<<<<<<< Updated upstream
+=======
+
+
+
+
+
+>>>>>>> Stashed changes
+    </SCRIPT>
+
 
     <style>
 
@@ -51,7 +78,6 @@
     top: 0;
     left: 0;
     z-index: 2;
-
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
     color: #ddddff;
     font-size: 2rem;
@@ -68,7 +94,7 @@
 }
 
 .logo a img{
-    height: 1.5em;
+    height: 1.7em;
 }
 
 .logo .header_toggleBtn{
@@ -79,8 +105,28 @@
     padding-left: 1rem;
 }
 
+.main_nav .lol{
+    padding-left: 1rem;
+    font-size: 2rem;
+    color: #ddddff;
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    }
+
+
+.main_nav .playlist{
+    padding-left: 1rem;
+    font-size: 2rem;
+    color: #ddddff;
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    }
+
 .sub_nav .sub_nav_tab{
     padding-right: 1rem;
+    margin-right: 3rem;
 }
 
     html,
@@ -104,7 +150,7 @@ ul{
         width: 400px;
         height: 500px;
         perspective: 800px;
-        padding-top: 20px;
+        padding-top: 50px;
         padding-left: 35px;
         display:inline-block;
         vertical-align:top;
@@ -144,9 +190,78 @@ ul{
         font-size: 30px;
     }
 
+<<<<<<< Updated upstream
+    .lolInfo {
+        margin-top: 500px;
+=======
+    .blank {
+        height: 500px;
+    }
 
+    .lolInfo {
+        width: 100%;
+        margin: 0px;
+        height: 500px;
+        color: white;
+        font-size: 23px;
+        display: inline;
+>>>>>>> Stashed changes
+    }
+
+    .lolInfoIntro {
+        color: white;
+        font-size: 30px;
+        padding-top: 90px;
+    }
+
+    .blank2 {
+        height: 500px;
+    }
+
+    .playlistInfoIntro {
+        color: white;
+        font-size: 30px;
+        padding-top: 90px;
+    }
+
+    .playlistInfo {
+        margin-left: 100px;
+        margin-top: 50px;
+    }
 
     </style>
+
+<<<<<<< Updated upstream
+    <script>
+    $(document).ready(function() {
+        $('#lolbutton').bind('click', function() {
+            var offset = $("#lol-info").offset();
+            $('html, body').animate({scrollTop: offset.top}, 500);
+        });
+}
+
+        function playList() {
+            alert("PlayList!");
+        }
+=======
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+
+	$(document).ready(function(){
+		$('#lolbutton').click(function(){
+			var offset = $('#loldiv').offset();
+	        $('html').animate({scrollTop : offset.top}, 600);
+		});
+	});
+
+
+
+
+
+>>>>>>> Stashed changes
+
+    </script>
 </head>
 
 <body>
@@ -154,24 +269,31 @@ ul{
     <div class="header_container">
         <div class="logo">
             <a href="">
-                <img src="https://blog.kakaocdn.net/dn/ekLMNM/btrzWsu8C4w/AFKGAVdSWR7Cy89fXEOEMK/img.png" alt="NETFLIX">
+                <img src="https://blog.kakaocdn.net/dn/ekLMNM/btrzWsu8C4w/AFKGAVdSWR7Cy89fXEOEMK/img.png"
+                     alt="SONGFLIX">
             </a>
+            <!--새로고침 가능하게!-->
             <button class="header_toggleBtn"><i class="fa fa-bars"></i></button>
         </div>
         <ul class="main_nav">
-            <li class="main_nav_tab">홈</li>
-            <li class="main_nav_tab">TV 프로그램</li>
-            <li class="main_nav_tab">영화</li>
-            <li class="main_nav_tab">최신 콘텐츠</li>
-            <li class="main_nav_tab">내가 찜한 콘텐츠</li>
+            <button class="lol" id="lolbutton" onmouseover="this.style.fontWeight='bold'"
+                    onmouseout="this.style.fontWeight=''">LoL 전적
+            </button>
+            <button class="playlist" onclick="playList()" onmouseover="this.style.fontWeight='bold'"
+                    onmouseout="this.style.fontWeight=''">플레이리스트
+            </button>
+
         </ul>
         <ul class="sub_nav">
-            <li class="sub_nav_tab"><i class="fas fa-search"></i></li>
+
+            <!--투데이기능!-->
+            <li class="sub_nav_tab">
+                <SCRIPT LANGUAGE=JAVASCRIPT TYPE="TEXT/JAVASCRIPT">
+document.write("Total <font color=red>"+hitCt+" </font>")
+                </SCRIPT>
             </li>
-            <li class="sub_nav_tab">키즈</li>
-            <li class="sub_nav_tab"><i class="fas fa-gift"></i></li>
-            <li class="sub_nav_tab"><i class="fas fa-bell"></i></li>
-            <li class="sub_nav_tab"><i class="fas fa-user"></i></li>
+
+            </li>
         </ul>
 
     </div>
@@ -184,11 +306,11 @@ ul{
             width=400 height=500></div>
     <!--item back 이미지는 추후 수정해야함!-->
     <div class="item back"><img
-            src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0cb3499b-cf0d-42a2-9a8d-12e508961406%2FKakaoTalk_20220418_160240348.jpg?table=block&id=aba2c27f-31cf-45a0-83d4-16b2bdee649f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=34873ddc-da24-4de9-a671-204842864bd3&cache=v2"
+            src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FnrGzN%2Fbtrz0EgTxKD%2FXCqiz6FpEGS2NhEqiCJDRk%2Fimg.jpg"
             width=400 height=500 alt="img back"/></div>
 </div>
 <div class="myInfo">
-    <div>
+    <div class="slide">
         <h1>간단 프로필</h1>
         <div>
             <p>
@@ -205,9 +327,96 @@ ul{
             </p>
             <p>
             <li><B>블로그 주소: https://naeilbaeumdan-songheew.tistory.com/&ensp;
-            👉&ensp; <a href="https://naeilbaeumdan-songheew.tistory.com/" target="_blank">바로가기</a></B></li></p>
+                👉&ensp; <a href="https://naeilbaeumdan-songheew.tistory.com/" target="_blank">바로가기</a></B></li>
+            </p>
+
         </div>
     </div>
+    <div class="lolInfo" id="lol-info">
+        <p>{{result}}</p>
+    </div>
+    <div class="playlistInfo">
+        <p>여기는 노래 플레이리스트 크롤링 후 넣을 것</p>
+    </div>
+</div>
+<div class="blank">
+
+</div>
+
+<div class="lolInfo" id="loldiv">
+    <div class="lolInfoIntro">
+        <p>
+        <CENTER><B>제 최근 15게임의 전적입니다!</CENTER>
+        </B></p>
+    </div>
+    <p>
+    <CENTER>{{game1}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game2}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game3}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game4}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game5}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game6}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game7}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game8}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game9}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game10}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game11}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game12}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game13}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game14}}</CENTER>
+    </p>
+    <p>
+    <CENTER>{{game15}}</CENTER>
+    </p>
+</div>
+<div class="blank2">
+
+</div>
+<div class="playlistInfoIntro">
+        <p>
+        <CENTER><B>제 페이보릿 플레이리스트입니다!</CENTER>
+        </B></p>
+    </div>
+<div class="playlistInfo">
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ebBtjwENcxw" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/G4Hb00s3j40" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7tgIc4iTt_M" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
 </div>
 </body>
 
