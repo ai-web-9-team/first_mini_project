@@ -15,8 +15,6 @@ def dongwoo_page():
 
 @app.route('/heejeong')
 def heejeong_page():
-
-
     return render_template('heejeong.html')
 
 @app.route('/jinyoung')
