@@ -1,7 +1,11 @@
-from flask import Flask, render_template, jsonify
-import requests
-from bs4 import BeautifulSoup
+from flask import Flask, render_template, jsonify, request
 import crawling
+from pymongo import MongoClient
+
+# client = MongoClient('mongodb://test:test@localhost', 27017)
+client = MongoClient('localhost', 27017)
+db = client.db9jo
+
 
 app = Flask(__name__)
 
@@ -36,22 +40,30 @@ def songhee_page():
                            game15=crawling_result[14]
                            )
 
-@app.route('/dongwoo/game', methods=['GET'])
-def game_info():
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
-    data = requests.get('https://loawa.com/char/%EB%B0%94%EB%9E%8C%EC%9D%98%EB%82%98%EB%9D%BC%EC%97%90%EC%84%9C%EC%98%A8%EB%AA%A8%ED%97%98%EA%B0%80', headers=headers)
+@app.route('/dongwoo/comment')
+def comment_listing():
+    member = request.args.get('id')
+    comments = list(db.comments.find({'member': member}, {'_id': False}))
 
-    soup = BeautifulSoup(data.text, 'html.parser')
+    msg = 'comment_listing is called'
+    return jsonify({'comments': comments, 'msg': msg})
 
-    char_id = soup.select_one('#char-app > div > div.char-title-bar.mt-2 > h2')
-    print(char_id)
+@app.route('/dongwoo/comment', methods=['POST'])
+def comment_save():
+    name = request.form['name_give']
+    comment = request.form['comment_give']
+    member = request.form['member_give']
 
-    char = {
-        'id': char_id
+    comment_info = {
+        'name': name,
+        'member': member,
+        'comment': comment
     }
 
-    return jsonify({'char': char,  'msg': '연결 완료'})
+    db.comments.insert_one(comment_info)
+
+    msg = 'comment_save is called'
+    return jsonify({'msg': msg})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
