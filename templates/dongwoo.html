@@ -27,8 +27,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
 
     <!--css 파일 불러오기!-->
-    <link href="/static/css/common.css" rel="stylesheet" type="text/css" />
-    <link href="/static/css/dongwoo.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/dongwoo.css" rel="stylesheet" type="text/css"/>
 
     <title>김동우 소개 페이지</title>
 
@@ -41,27 +41,27 @@
 
         function move_info() {
             var offset = $("#my-info").offset(); //해당 위치 반환
-            $('html, body').animate({scrollTop : offset.top}, 400);
+            $('html, body').animate({scrollTop: offset.top - 200}, 400);
         }
 
         function move_song() {
             var offset = $("#my-song").offset(); //해당 위치 반환
-            $('html, body').animate({scrollTop : offset.top}, 400);
+            $('html, body').animate({scrollTop: offset.top - 200}, 400);
         }
 
         function move_merit() {
             var offset = $("#my-merit").offset(); //해당 위치 반환
-            $('html, body').animate({scrollTop : offset.top}, 400);
+            $('html, body').animate({scrollTop: offset.top - 200}, 400);
         }
 
         function move_style() {
             var offset = $("#my-style").offset(); //해당 위치 반환
-            $('html, body').animate({scrollTop : offset.top}, 400);
+            $('html, body').animate({scrollTop: offset.top - 200}, 400);
         }
 
         function move_members() {
             var offset = $("#my-members").offset(); //해당 위치 반환
-            $('html, body').animate({scrollTop : offset.top}, 400);
+            $('html, body').animate({scrollTop: offset.top - 200}, 400);
         }
 
         function game_char_info() {
@@ -78,131 +78,145 @@
     </script>
 </head>
 <body style="background-color:rgb(20,20,20);">
-    <div class="mytitle">
-        <h1 class="main_title">꾸러기 <span class="red">9조대</span></h1>
-        <div class="sub_title tap-btns">
-            <span style="color: gray; cursor:pointer;" onclick="move_info()">기본 정보</span>
-            <span style="color: lightcoral; cursor:pointer;" onclick="move_song()">내가 좋아하는 노래</span>
-            <span style="color: dodgerblue; cursor:pointer;" onclick="move_merit()">객관적으로 살펴본 나의 장점</span>
-            <span style="color: peru; cursor:pointer;" onclick="move_style()">협업을 하는 과정에서의 나의 스타일</span>
-            <span style="color: gray; cursor:pointer;" onclick="move_members()">멤버들</span></div>
+<div class="mytitle">
+    <h1 class="main_title">꾸러기 <span class="red">9조대</span></h1>
+    <div class="sub_title tap-btns">
+        <span style="color: gray; cursor:pointer;" onclick="move_info()">기본 정보</span>
+        <span style="color: lightcoral; cursor:pointer;" onclick="move_song()">내가 좋아하는 노래</span>
+        <span style="color: dodgerblue; cursor:pointer;" onclick="move_merit()">객관적으로 살펴본 나의 장점</span>
+        <span style="color: peru; cursor:pointer;" onclick="move_style()">협업을 하는 과정에서의 나의 스타일</span>
+        <span style="color: gray; cursor:pointer;" onclick="move_members()">멤버들</span></div>
+</div>
+<div class="row1">
+    <div class="left">
+        <div class="container-box2">
+            <div class="container">
+                <div class="item front"><a href="/dongwoo">
+                    <img width="100%"
+                         src="https://avatars.githubusercontent.com/u/68724828?v=4"
+                         alt="img front"/></a></div>
+                <div class="item back"><a href="/dongwoo">
+                    <img width="100%"
+                         src="https://velog.velcdn.com/images/kimphysicsman/post/37e0b81f-7945-4ad3-b719-7c1b87076d83/image.jpg"
+                         alt="img back"/></a></div>
+            </div> </div>
     </div>
-    <div class="body-box">
-
-        <div class="row1">
-            <div class="left">
-                <div class="profile"></div>
-            </div>
-            <div class="right person-info font-white">
-                <p class="sub_title" id="" style="color: gray;">기 본 정 보</p>
-                <p>이름 : 김동우</p>
-                <p>MBTI : INTP</p>
-                <p>관심사 : 물리, 코딩, 알고리즘, 게임</p>
-                <p>취미 : 게임(롤, 로스트아크), 크로스핏</p>
-                <p>특징 : 붓글씨 잘씀</p>
-                <p>블로그 : <a href="https://velog.io/@kimphysicsman">https://velog.io/@kimphysicsman</a></p>
-            </div>
-            <div class="width10"></div>
-        </div>
-
-        <div class="row2">
-            <div class="left">
-                <div id="youtube" class="youtube">
-                <iframe width="400" height="220" src="https://www.youtube.com/embed/gbufWFSf250"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="right font-white">
-                <p class="sub_title" style="color: lightcoral;" id="my-song">내가 제일 좋아하는 노래</p>
-                <p class="person-info"> 쪽쪽 - 권진아 </p>
-                <p class="text-size">여름철 잠 못 이루게 하는 모기를 향한 아주 귀여운 노래!</p>
-            </div>
-            <div class="width10"></div>
-        </div>
-
-        <div class="row5">
-            <div class="width100"></div>
-            <div class="width100"></div>
-            <div class="game-char"></div>
-            <div class="width100"></div>
-            <div class="game-char-info">
-                <p class="sub_title char-sub-title" id="my-info" >캐 릭 터 정 보</p>
-                <div class="person-info font-white">
-                    <p>ID : </p>
-                    <p>직업 : </p>
-                    <p>서버/길드 : </p>
-                    <p>레벨/랭킹 : </p>
-                    <p>로아와 : <a href="https://loawa.com/char/바람의나라에서온모험가">https://loawa.com/char/바람의나라에서온모험가</a></p>
-            </div>
-            </div>
-            <div class="width100"></div>
-        </div>
-
-        <div class="row3">
-            <div class="left font-white">
-                <p class="sub_title" style="color: dodgerblue;" id="my-merit">객관적으로 살펴본 나의 장점</p>
-                <p class="person-info">1. 이성적으로 분석하고 논리적인 사고를 잘한다!</p>
-                <p class="text-size">저는 어떤 현상을 이해할 때 감성적으로 접근하기보다는 이성적으로
-                    인과관계를 확실히하고 제 3자의 입장에서 객관적으로 바라보려고 노력합니다. 이 점은
-                    어떤 문제점에 대해서 고민할 때 해결책을 찾거나 방향성을 제시하는 데 큰 도움이 됩니다.</p>
-                <p class="person-info">2. 동기부여는 나의 가장 큰 원동력!</p>
-                <p class="text-size">저에게 있어서 어떤 일을 할 때 가장 큰 원동력이 되는 것은 바로 '동기부여'입니다.
-                    그 일을 내가 왜 해야하는지 명확하게 알고있고 또 내가 하고싶어하는 일이라면 어떤
-                    어려운 일이라도 끝까지 해낼 수 있다고 자부합니다.</p>
-            </div>
-            <div class="right" align="right">
-                <div class="game-img"></div>
-                <div class="text-size font-white"> 로스트아크 모모코 피규어</div>
-            </div>
-        </div>
-
-        <div class="row4">
-            <div class="right">
-                <div class="calli-img">
-                </div>
-                <div class="text-size font-white"> 홍익 서우회 - 2019 춘계전시회에서 </div>
-             </div>
-            <div class="left font-white">
-                <p class="sub_title" style="color: peru;" id="my-style">협업을 하는 과정에서의 자신의 스타일</p>
-                <p class="text-size">저는 협업을 하는데 가장 중요한 것은 의사소통이라고 생각합니다.</p>
-                <p class="person-info">1. 상대방의 입장을 생각해 보자!</p>
-                <p class="text-size">저는 여러 사람들과 의견을 주고받을 때 상대방의 입장을 먼저 생각해보는 편입니다.
-                    상대가 누군지에 따라 내가 가진 생각을 어떻게 표현을 해야 온전히 전달될 수 있을 지 파악하는게 중요하다고 생각합니다.</p>
-                <p class="person-info">2. 정확하게 파악하고 확실하게 표현하자!</p>
-                <p class="text-size">상대방의 의견을 들을 때는 내가 이해하고 있는 것이 맞는지 다시 한번 확인하고
-                    나의 생각을 이야기할 때는 제대로 이해했는지 다시 한번 확인하는 편입니다.</p>
-                <p class="person-info">3. 누가 들어도 이해할 수 있도록 쉽게 설명하자!</p>
-                <p class="text-size">제가 존경하는 인물인 물리학자 리처드 파인만은 어떤 어려운 개념도 일반인이 이해할 수 있을 정도로
-                    쉽게 설명하는데 탁월했습니다. 어릴적부터 그의 책을 읽으며 그의 설명방식이나 말하는 법을 배우고자 노력했고 덕분에
-                    저 또한 어려운 일도 쉽게 풀어서 설명하고 해결하는 능력을 기를 수 있었습니다.</p>
-            </div>
-        </div>
-        <p></p>
+    <div class="right person-info font-white">
+        <p class="sub_title" id="my-info" style="color: gray;">기 본 정 보</p>
+        <p>이름 : 김동우</p>
+        <p>MBTI : INTP</p>
+        <p>관심사 : 물리, 코딩, 알고리즘, 게임</p>
+        <p>취미 : 게임(롤, 로스트아크), 크로스핏</p>
+        <p>특징 : 붓글씨 잘씀</p>
+        <p>블로그 : <a href="https://velog.io/@kimphysicsman">https://velog.io/@kimphysicsman</a></p>
     </div>
+    <div class="width10"></div>
+</div>
 
+<div class="row2">
+    <div class="left">
+        <div id="youtube" class="youtube">
+            <iframe width="400" height="220" src="https://www.youtube.com/embed/gbufWFSf250"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
     </div>
-    <div style="width: 1000px; margin: auto;">
-        <p id="my-members" class="font-white sub_title" style="color: gray;"> 듬직한 우리 <span class="red">9조대</span> 멤버들</p>
+    <div class="right font-white">
+        <p class="sub_title" style="color: lightcoral;" id="my-song">내가 제일 좋아하는 노래</p>
+        <p class="person-info"> 쪽쪽 - 권진아 </p>
+        <p class="text-size">여름철 잠 못 이루게 하는 모기를 향한 아주 귀여운 노래!</p>
+    </div>
+    <div class="width10"></div>
+</div>
+
+<div class="row5">
+    <div class="width100"></div>
+    <div class="width100"></div>
+    <div class="game-char"></div>
+    <div class="width100"></div>
+    <div class="game-char-info">
+        <p class="sub_title char-sub-title">게 임 캐 릭 터 정 보</p>
+        <div class="person-info font-white">
+            <p>ID : 바람의나라에서온모험가</p>
+            <p>직업 : 블레이드</p>
+            <p>서버/길드 : 카마인 / 무시무시한모코코가될거야</p>
+            <p>레벨/랭킹 : 1585 / 25,984 위</p>
+            <p>로아와 : <a href="https://loawa.com/char/바람의나라에서온모험가">https://loawa.com/char/바람의나라에서온모험가</a></p>
+        </div>
+    </div>
+    <div class="width100"></div>
+</div>
+
+<div class="row3">
+    <div class="left font-white">
+        <p class="sub_title" style="color: dodgerblue;" id="my-merit">객관적으로 살펴본 나의 장점</p>
+        <p class="person-info">1. 이성적으로 분석하고 논리적인 사고를 잘한다!</p>
+        <p class="text-size">저는 어떤 현상을 이해할 때 감성적으로 접근하기보다는 이성적으로
+            인과관계를 확실히하고 제 3자의 입장에서 객관적으로 바라보려고 노력합니다. 이 점은
+            어떤 문제점에 대해서 고민할 때 해결책을 찾거나 방향성을 제시하는 데 큰 도움이 됩니다.</p>
+        <p class="person-info">2. 동기부여는 나의 가장 큰 원동력!</p>
+        <p class="text-size">저에게 있어서 어떤 일을 할 때 가장 큰 원동력이 되는 것은 바로 '동기부여'입니다.
+            그 일을 내가 왜 해야하는지 명확하게 알고있고 또 내가 하고싶어하는 일이라면 어떤
+            어려운 일이라도 끝까지 해낼 수 있다고 자부합니다.</p>
+    </div>
+    <div class="right" align="right">
+        <div class="game-img"></div>
+        <div class="text-size font-white"> 로스트아크 모모코 피규어</div>
+    </div>
+</div>
+
+<div class="row4">
+    <div class="right">
+        <div class="calli-img">
+        </div>
+        <div class="text-size font-white"> 홍익 서우회 - 2019 춘계전시회에서</div>
+    </div>
+    <div class="left font-white">
+        <p class="sub_title" style="color: peru;" id="my-style">협업을 하는 과정에서의 자신의 스타일</p>
+        <p class="text-size">저는 협업을 하는데 가장 중요한 것은 의사소통이라고 생각합니다.</p>
+        <p class="person-info">1. 상대방의 입장을 생각해 보자!</p>
+        <p class="text-size">저는 여러 사람들과 의견을 주고받을 때 상대방의 입장을 먼저 생각해보는 편입니다.
+            상대가 누군지에 따라 내가 가진 생각을 어떻게 표현을 해야 온전히 전달될 수 있을 지 파악하는게 중요하다고 생각합니다.</p>
+        <p class="person-info">2. 정확하게 파악하고 확실하게 표현하자!</p>
+        <p class="text-size">상대방의 의견을 들을 때는 내가 이해하고 있는 것이 맞는지 다시 한번 확인하고
+            나의 생각을 이야기할 때는 제대로 이해했는지 다시 한번 확인하는 편입니다.</p>
+        <p class="person-info">3. 누가 들어도 이해할 수 있도록 쉽게 설명하자!</p>
+        <p class="text-size">제가 존경하는 인물인 물리학자 리처드 파인만은 어떤 어려운 개념도 일반인이 이해할 수 있을 정도로
+            쉽게 설명하는데 탁월했습니다. 어릴적부터 그의 책을 읽으며 그의 설명방식이나 말하는 법을 배우고자 노력했고 덕분에
+            저 또한 어려운 일도 쉽게 풀어서 설명하고 해결하는 능력을 기를 수 있었습니다.</p>
+    </div>
+</div>
+<p></p>
+</div>
+
+</div>
+<div style="width: 1000px; margin: auto;">
+    <p id="my-members" class="font-white sub_title" style="color: gray;"> 듬직한 우리 <span class="red">9조대</span> 멤버들</p>
     <div class="member-box">
+        <div class="container-box">
         <div class="container">
-            <div class="item front"><a href="/heejeong"><img class="img-margin-1" width="100%" src="https://t1.daumcdn.net/cfile/tistory/2438573358070C1535" alt="img front"/></a></div>
-            <div class="item back"><a href="/heejeong"><img class="img-margin-1" width="100%" src="https://t1.daumcdn.net/cfile/tistory/2438573358070C1535" alt="img back"/></a></div>
+            <div class="item front"><a href="/heejeong"><img class="img-margin-1" height="100%" src="https://teamsparta.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa39bbc1b-a750-4b0c-b4db-8a03b190bc07%2F%ED%9E%88%EB%8F%99%EC%9D%B4%EC%82%AC%EC%A7%84.jpg?table=block&id=b8679576-3505-4db5-b450-edffbec171d9&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1780&userId=&cache=v2" alt="img front"/></a></div>
+            <div class="item back"><a href="/heejeong"><img class="img-margin-1" height="100%" src="https://teamsparta.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa39bbc1b-a750-4b0c-b4db-8a03b190bc07%2F%ED%9E%88%EB%8F%99%EC%9D%B4%EC%82%AC%EC%A7%84.jpg?table=block&id=b8679576-3505-4db5-b450-edffbec171d9&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1780&userId=&cache=v2" alt="img back"/></a></div>
             <p align="center" class="font-white text-size"> 김희정 </p>
-        </div>
-        <div class="container">
+        </div></div>
+        <div class="container-box"><div class="container">
             <div class="item front"><a href="/songhee"><img width="100%" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0cb3499b-cf0d-42a2-9a8d-12e508961406%2FKakaoTalk_20220418_160240348.jpg?table=block&id=aba2c27f-31cf-45a0-83d4-16b2bdee649f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=34873ddc-da24-4de9-a671-204842864bd3&cache=v2" alt="img front"/></a></div>
             <div class="item back"><a href="/songhee"><img width="100%" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0cb3499b-cf0d-42a2-9a8d-12e508961406%2FKakaoTalk_20220418_160240348.jpg?table=block&id=aba2c27f-31cf-45a0-83d4-16b2bdee649f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=34873ddc-da24-4de9-a671-204842864bd3&cache=v2" alt="img back"/></a></div>
             <p align="center" class="font-white text-size"> 원송희 </p>
-        </div>
+        </div></div>
+        <div class="container-box">
         <div class="container">
-            <div class="item front" align="center"><a href="/jinyoung"><img height="100%" src="https://teamsparta.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faab293e5-e818-4a33-be5f-9e5f209ee76b%2F32154099.jpg?table=block&id=9a6b1aa9-de45-43b4-9361-4d0e1280c2e4&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=290&userId=&cache=v2" alt="img front"/></a></div>
-            <div class="item back"  align="center"><a href="/jinyoung"><img height="100%" src="https://teamsparta.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faab293e5-e818-4a33-be5f-9e5f209ee76b%2F32154099.jpg?table=block&id=9a6b1aa9-de45-43b4-9361-4d0e1280c2e4&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=290&userId=&cache=v2" alt="img back"/></a></div>
+            <div class="item front" align="center"><a href="/jinyoung"><img height="100%"
+                                                                            src="https://teamsparta.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faab293e5-e818-4a33-be5f-9e5f209ee76b%2F32154099.jpg?table=block&id=9a6b1aa9-de45-43b4-9361-4d0e1280c2e4&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=290&userId=&cache=v2"
+                                                                            alt="img front"/></a></div>
+            <div class="item back" align="center"><a href="/jinyoung"><img height="100%"
+                                                                           src="https://teamsparta.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faab293e5-e818-4a33-be5f-9e5f209ee76b%2F32154099.jpg?table=block&id=9a6b1aa9-de45-43b4-9361-4d0e1280c2e4&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=290&userId=&cache=v2"
+                                                                           alt="img back"/></a></div>
             <p align="center" class="font-white text-size"> 전진영 </p>
-        </div>
+        </div></div>
     </div>
-    </div>
+</div>
 
 
 </body>
