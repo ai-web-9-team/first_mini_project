@@ -1,16 +1,7 @@
-<<<<<<< .merge_file_a17100
 from flask import Flask, render_template, jsonify
 import requests
 from bs4 import BeautifulSoup
-
-=======
-from flask import Flask, render_template
 import crawling
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
->>>>>>> .merge_file_a18140
 
 app = Flask(__name__)
 
@@ -33,10 +24,6 @@ def jinyung_page():
 
 @app.route('/songhee')
 def songhee_page():
-<<<<<<< Updated upstream
-    result=crawling.result
-    return render_template('songhee.html', result=result)
-=======
     crawling_result=crawling.game15_result
     return render_template('songhee.html',
                            game1=crawling_result[0], game2=crawling_result[1],
@@ -48,7 +35,6 @@ def songhee_page():
                            game13=crawling_result[12], game14=crawling_result[13],
                            game15=crawling_result[14]
                            )
->>>>>>> Stashed changes
 
 @app.route('/dongwoo/game', methods=['GET'])
 def game_info():

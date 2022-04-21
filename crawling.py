@@ -23,11 +23,8 @@ soup = BeautifulSoup(data.text, 'html.parser')
 
 games=soup.select("#__next > div.css-19ozhet.e1sjz9pt1 > div.css-1sq1kbv.e3mqlfu0 > ul > li")
 result=[]
-<<<<<<< Updated upstream
-for i in range(20):
-=======
+
 for i in range(15):
->>>>>>> Stashed changes
     winOrLose=games[i].select_one("div > div.info > div.game-result")
     kda=games[i].select_one("div > div.kda > div.k-d-a")
     champion=games[i].select_one("div > div.champion > div.name")
@@ -36,9 +33,6 @@ for i in range(15):
     #print(playTime.text)
     #print(champion.text)
     #print(when.text)
-<<<<<<< Updated upstream
-    result.append([winOrLose.text, kda.text, champion.text, when.text]) # 플라스크 연결은 나중에 하자...
-=======
     result.append([winOrLose.text, kda.text, champion.text, when.text])
 
 game15_result=[]
@@ -58,4 +52,3 @@ for r in result:
     else:
         pretty_result+="패배했습니다.. ㅠ_ㅠ"
     game15_result.append(pretty_result)
->>>>>>> Stashed changes
