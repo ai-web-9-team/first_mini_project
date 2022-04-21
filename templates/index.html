@@ -13,125 +13,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            font-family: 'Single Day', DXKorea Inc;
-        }
+    <!--css 파일 불러오기!-->
+     <link href="/static/css/common.css" rel="stylesheet" type="text/css" />
 
-        .red {
-            color: red;
-        }
+    <script>
 
-        .team-box {
-            background: lightgreen;
-            width: 100%;
-            height: 1000px;
-            margin: auto;
-        }
-
-        .main-title {
-            font-size: 30px;
-            font-weight: bolder;
-            color: green;
-            /*background: aqua;*/
-        }
-
-        .member-box {
-            /*background: green;*/
-            width: 100%;
-            margin: 50px auto 50px auto;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-
-        body {
-            padding: 20px;
-        }
-
-        .container {
-            /*background: red;*/
-            width: 200px;
-            height: 200px;
-            perspective: 300px;
-            justify-content: space-between;
-        }
-
-        .container .item {
-            width: 200px;
-            height: 200px;
-            /*border: 1px solid #828282;*/
-            font-size: 35px;
-            backface-visibility: hidden;
-            transition: 1s;
-        }
-
-        .container .item.front {
-            position: absolute;
-            transform: rotateY(0deg);
-        }
-
-        .container:hover .item.front {
-            transform: rotateY(180deg);
-        }
-
-        .container .item.back {
-            transform: rotateY(-180deg);
-        }
-
-        .container:hover .item.back {
-            transform: rotateY(0deg);
-        }
-
-        .img-margin-1{
-            margin-top: 50px;
-        }
-
-        .intro-ment {
-            margin-top: 150px;
-            font-size: 40px
-        }
-    </style>
+    </script>
 
 </head>
 
-<body>
+<body style="background-color:rgb(20,20,20);">
     <h1 class="main-title">꾸러기 <span class="red">9조대</span></h1>
 
     <h2 align="center" class="intro-ment">내일 배움 캠프 AI 2회차 - 꾸러기 9조대 팀 소개 페이지입니다 </h2>
 
 
+    <div style="width: 1000px; margin: auto;">
+        <p id="my-members" class="font-white sub_title" style="color: gray;"> 듬직한 우리 <span class="red">9조대</span> 멤버들</p>
     <div class="member-box">
         <div class="container">
             <div class="item front"><a href="/dongwoo"><img width="100%" src="https://avatars.githubusercontent.com/u/68724828?v=4" alt="img front"/></a></div>
-            <div class="item back" align="center"><a href="/dongwoo"><img height="100%" src="/static/images/31288698_1370862323046033_876359382072295424_n.jpg" alt="img back"/></a></div>
-            <p align="center"> 김동우 </p>
+            <div class="item back" align="center"><a href="/dongwoo"><img height="100%" src="/static/images/calligraphy.png" alt="img back"/></a></div>
+            <p align="center" class="font-white text-size"> 김동우 </p>
         </div>
         <div class="container">
+
             <div class="item front"><a href="/heejeong"><img class="img-margin-1" width="100%" src="https://t1.daumcdn.net/cfile/tistory/2438573358070C1535" alt="img front"/></a></div>
             <div class="item back"><a href="/heejeong"><img class="img-margin-1" width="100%" src="https://t1.daumcdn.net/cfile/tistory/2438573358070C1535" alt="img back"/></a></div>
-            <p align="center"> 김희정 </p>
+            <p align="center" class="font-white text-size"> 김희정 </p>
+
         </div>
         <div class="container">
             <div class="item front"><a href="/songhee"><img width="100%" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0cb3499b-cf0d-42a2-9a8d-12e508961406%2FKakaoTalk_20220418_160240348.jpg?table=block&id=aba2c27f-31cf-45a0-83d4-16b2bdee649f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=34873ddc-da24-4de9-a671-204842864bd3&cache=v2" alt="img front"/></a></div>
             <div class="item back"><a href="/songhee"><img width="100%" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0cb3499b-cf0d-42a2-9a8d-12e508961406%2FKakaoTalk_20220418_160240348.jpg?table=block&id=aba2c27f-31cf-45a0-83d4-16b2bdee649f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=34873ddc-da24-4de9-a671-204842864bd3&cache=v2" alt="img back"/></a></div>
-            <p align="center"> 원송희 </p>
+            <p align="center" class="font-white text-size"> 원송희 </p>
         </div>
         <div class="container">
             <div class="item front" align="center"><a href="/jinyoung"><img height="100%" src="https://teamsparta.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faab293e5-e818-4a33-be5f-9e5f209ee76b%2F32154099.jpg?table=block&id=9a6b1aa9-de45-43b4-9361-4d0e1280c2e4&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=290&userId=&cache=v2" alt="img front"/></a></div>
             <div class="item back"  align="center"><a href="/jinyoung"><img height="100%" src="https://teamsparta.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faab293e5-e818-4a33-be5f-9e5f209ee76b%2F32154099.jpg?table=block&id=9a6b1aa9-de45-43b4-9361-4d0e1280c2e4&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=290&userId=&cache=v2" alt="img back"/></a></div>
-            <p align="center"> 전진영 </p>
+            <p align="center" class="font-white text-size"> 전진영 </p>
         </div>
     </div>
 
 
     <div class="team-box">
-
-
     </div>
-
-
-
 </body>
 </html>
