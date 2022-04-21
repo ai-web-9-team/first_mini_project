@@ -17,13 +17,17 @@
     font-size: 30px;
     font-weight: bolder;
     color: green;
+    text-shadow: -1px 0 #FFF, 0 1px #FFF, 1px 0 #FFF, 0 -1px #FFF;
     /*background: aqua;*/
 }
 
 .member-box {
     /*background: green;*/
     width: 100%;
-    margin: 50px auto 50px auto;
+    height: 300px;
+
+    margin: 0px auto 50px auto;
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -31,13 +35,13 @@
 }
 
 body {
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
 }
 
 .container {
     /*background: red;*/
     width: 200px;
-    height: 200px;
+    height: 300px;
     perspective: 300px;
     justify-content: space-between;
 }
@@ -74,9 +78,11 @@ body {
 
 .intro-ment {
     color: white;
-    margin-top: 150px;
+    margin-top: 50px;
+    margin-bottom: 100px;
     font-size: 45px;
     font-weight: normal;
+
 }
 
 .font-white {
@@ -85,4 +91,11 @@ body {
 
 .text-size {
     font-size: 30px
+}
+
+.sub_title {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: -1px 0 #FFF, 0 1px #FFF, 1px 0 #FFF, 0 -1px #FFF;
 }
