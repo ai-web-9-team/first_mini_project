@@ -9,9 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
@@ -26,6 +26,8 @@
 
 
     <title>전진영 소개 페이지</title>
+    <link href="/static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/dongwoo.css" rel="stylesheet" type="text/css" />
 
     <style>
         * {
@@ -90,9 +92,11 @@
         .person-info {
             font-size: 30px;
         }
+
         .info {
             font-size: 25px;
         }
+
         .row2 {
             width: 1000px;
             height: 250px;
@@ -115,7 +119,6 @@
             border-radius: 70%;
             overflow: hidden;
         }
-
         .wrap {
             display: flex;
             flex-direction: row;
@@ -123,14 +126,17 @@
             justify-content: center;
             margin-top: 20px;
         }
+        .content img {
+            width: 100px;
+        }
     </style>
 
 </head>
 <body>
-    <div class="mytitle">
-        <h1>꾸러기 9조대</h1>
-    </div>
-    <input id="night_day" type="button" value="night" onclick="
+<div class="mytitle">
+    <h1>꾸러기 9조대</h1>
+</div>
+<input id="night_day" type="button" value="night" onclick="
     if (document.querySelector('#night_day').value === 'night'){
       document.querySelector('body').style.backgroundColor = 'rgb(10,10,10)';
       document.querySelector('body').style.color = 'white';
@@ -141,99 +147,114 @@
       document.querySelector('#night_day').value = 'night';
     }
     ">
-    <div class="body-box">
-        <div class="row1">
-            <div class="left">
-                <div class="profile"></div>
-            </div>
-            <div class="center"></div>
-            <div class="right person-info">
-                <p>이름 : 전진영</p>
-                <p>MBTI : ISFP</p>
-                <p>관심사 : 게임, 여행</p>
-                <p>취미 : 게임(롤, 스타크래프트2), 음악듣기, 해외여행다니기</p>
-                <p>특징 : 코로나 전엔 매달 비행기 타고다닌 여행광</p>
-                <p>블로그 : <a href="https://jjy7546.tistory.com/">https://jjy7546.tistory.com/</a></p>
-            </div>
+<div class="body-box">
+    <div class="row1">
+        <div class="left">
+            <div class="profile"></div>
         </div>
-        <hr>
-        <div class="row2">
-            <div class="left">
-                <div id="youtube" class="youtube">
-                    <iframe width="400" height="220" src="https://www.youtube.com/embed/kxgj5af8zg4"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="center"></div>
-            <div class="right person-info">
-                <p>내가 좋아하는 노래 : The Weeknd - Out of Time</p>
-                <p>이유 : 레트로한 분위기에 빠져들 수 있는 노래</p>
-            </div>
-        </div>
-        <hr>
-        <div class="accordion person-info" id="accordionPanelsStayOpenExample" style="color: black">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                    <button class="accordion-button person-info" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseOne">
-                        <strong>객관적으로 살펴본 자신의 장점</strong>
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
-                     aria-labelledby="panelsStayOpen-headingOne">
-                    <div class="accordion-body">
-                        <p class="person-info">1. 배우려는 자세!</p>
-                        <p class="info">타인의 조언을 받아들이는 자세가 가장 중요하고 저의 장점이라 생각합니다. 배우려는 자세가 있다면 팀원과의 불협화음도 줄일 수 있습니다.</p>
-                        <p class="person-info">2. 긍정적인 마인드!</p>
-                        <p class="info">저는 모든 일을 되도록 긍정적으로 받아들이고 마음의 여유를 가지고 생활하려 노력합니다. 긍정적인 마인드를 가지고 있다면 못할 일이 없다 생각합니다.</p>
-                        <p class="person-info">3. 도전적인 성향!</p>
-                        <p class="info">저는 도전적인 성향을 가지고 있어 무슨 일이든 목표한 바가 있으면 이룰 때까지 절대 포기하지 않는 성향입니다. 이러한 성향으로 새로운 것을 접하는데 두려움이 없는 것이 장점이라 생각합니다.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                    <button class="accordion-button person-info" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseTwo">
-                        <strong>협업을 하는 과정에서의 자신의 스타일</strong>
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                     aria-labelledby="panelsStayOpen-headingTwo">
-                    <div class="accordion-body">
-                        <p class="person-info">1. 경청하는 자세</p>
-                        <p class="info">팀원들의 말을 허투루 안듣고 집중하여 놓치지 않는다.</p>
-                        <p class="person-info">2. </p>
-                        <p class="info">asdasdas</p>
-                        <p class="person-info">1. sdsasdasd</p>
-                        <p class="info">asdasdas</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <h1 style="padding-top: 40px" align="center">팀원 소개 페이지</h1>
-    </div>
-    <div class="wrap person-info">
-        <div>
-            <a href="/dongwoo">
-                <img class="box" src="/static/images/dongwoo.png">
-                <span style="text-align:center; display:inline-block; width:150px">김동우</span></a>
-        </div>
-        <div>
-            <a href="/heejeong">
-                <img class="box" src="/static/images/heejeong.png">
-                <span style="text-align:center; display:inline-block; width:150px">김희정</span></a>
-        </div>
-        <div>
-            <a href="/songhee">
-                <img class="box" src="/static/images/songhee.png">
-                <span style="text-align:center; display:inline-block; width:150px">원송희</span></a>
+        <div class="center"></div>
+        <div class="right person-info">
+            <p>이름 : 전진영</p>
+            <p>MBTI : ISFP</p>
+            <p>블로그 : <a href="https://jjy7546.tistory.com/">https://jjy7546.tistory.com/</a></p>
+            <p>관심사 : 게임, 여행</p>
+            <p>취미 : 게임(롤, 스타크래프트2), 음악듣기, 해외여행다니기</p>
+            <p>특징 : 코로나 전엔 매달 비행기 타고다닌 여행광</p>
         </div>
     </div>
+    <hr>
+    <div class="row1">
+        <h1>여행 사진 :</h1>
+        <div class="fotorama"
+             data-width="600"
+             data-height="360"
+             data-allowfullscreen="true"
+             data-nav="thumbs"
+             data-autoplay="true">
+            <img src="/static/img/slide1.jpg" data-caption=""/>
+            <img src="/static/img/slide2.jpg" data-caption=""/>
+            <img src="/static/img/slide3.jpg" data-caption=""/>
+            <img src="/static/img/slide4.jpg" data-caption=""/>
+        </div>
+    </div>
+    <hr>
+    <div class="row2">
+        <div class="left">
+            <div id="youtube" class="youtube">
+                <iframe width="400" height="220" src="https://www.youtube.com/embed/kxgj5af8zg4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="center"></div>
+        <div class="right person-info">
+            <p>내가 좋아하는 노래 : The Weeknd - Out of Time</p>
+            <p>이유 : 레트로한 분위기에 빠져들 수 있는 노래</p>
+        </div>
+    </div>
+    <hr>
+    <div class="accordion person-info" id="accordionPanelsStayOpenExample" style="color: black">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button person-info" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                    <strong>객관적으로 살펴본 자신의 장점</strong>
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                 aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+                    <p class="person-info">1. 배우려는 자세!</p>
+                    <p class="info">타인의 조언을 받아들이는 자세가 가장 중요하고 저의 장점이라 생각합니다. 배우려는 자세가 있다면 팀원과의 불협화음도 줄일 수 있습니다.</p>
+                    <p class="person-info">2. 긍정적인 마인드!</p>
+                    <p class="info">저는 모든 일을 되도록 긍정적으로 받아들이고 마음의 여유를 가지고 생활하려 노력합니다. 긍정적인 마인드를 가지고 있다면 못할 일이 없다
+                        생각합니다.</p>
+                    <p class="person-info">3. 도전적인 성향!</p>
+                    <p class="info">저는 도전적인 성향을 가지고 있어 무슨 일이든 목표한 바가 있으면 이룰 때까지 절대 포기하지 않는 성향입니다. 이러한 성향으로 새로운 것을 접하는데
+                        두려움이 없는 것이 장점이라 생각합니다.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button person-info" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                    <strong>협업을 하는 과정에서의 자신의 스타일</strong>
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                 aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+                    <p class="person-info">1. 경청하는 자세</p>
+                    <p class="info">팀원들의 말을 허투루 안듣고 집중하여 놓치지 않는다.</p>
+                    <p class="person-info">2. 상호 책임감 </p>
+                    <p class="info">서로 맡은 바에 책임을 다 하는 것이 협업에서의 필수고 내 스타일인 것 같다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h1 style="padding-top: 40px" align="center">팀원 소개 페이지</h1>
+</div>
+<div class="wrap person-info">
+    <div>
+        <a href="/dongwoo">
+            <img class="box" src="/static/images/dongwoo.png">
+            <span style="text-align:center; display:inline-block; width:150px">김동우</span></a>
+    </div>
+    <div>
+        <a href="/heejeong">
+            <img class="box" src="/static/images/heejeong.png">
+            <span style="text-align:center; display:inline-block; width:150px">김희정</span></a>
+    </div>
+    <div>
+        <a href="/songhee">
+            <img class="box" src="/static/images/songhee.png">
+            <span style="text-align:center; display:inline-block; width:150px">원송희</span></a>
+    </div>
+</div>
 </body>
 </html>
