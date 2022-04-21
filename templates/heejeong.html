@@ -31,6 +31,7 @@
 
 
 
+
     <title>김희정 자기소개</title>
     <style>
         * {
@@ -47,7 +48,6 @@
             background-position: center;
             background-size: cover;
 
-            color: red;
 
             display: flex;
             flex-direction: column;
@@ -55,6 +55,15 @@
             justify-content: center;
         }
 
+        .title {
+            color: red;
+            font-size: 50px;
+        }
+        .temperature {
+            color: white;
+
+
+        }
 
         .body-box {
             /*background: green;*/
@@ -203,34 +212,83 @@
         }
 
 
-        .wrap {
+        .member-box {
+            /*background: green;*/
+            width: 100%;
+            height: 300px;
+
+            margin: 0px auto 50px auto;
+
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: center;
-            margin-top: 20px;
+            justify-content: space-evenly;
         }
-        .content img {
-            width: 100px;
+
+        body {
+            padding: 0px 20px 20px 20px;
         }
+
+        .container {
+            /*background: red;*/
+            width: 200px;
+            height: 300px;
+            perspective: 300px;
+            justify-content: space-between;
+        }
+
+        .container .item {
+            width: 200px;
+            height: 200px;
+            /*border: 1px solid #828282;*/
+            font-size: 35px;
+            backface-visibility: hidden;
+            transition: 1s;
+        }
+
+        .container .item.front {
+            position: absolute;
+            transform: rotateY(0deg);
+        }
+
+        .container:hover .item.front {
+            transform: rotateY(180deg);
+        }
+
+        .container .item.back {
+            transform: rotateY(-180deg);
+        }
+
+        .container:hover .item.back {
+            transform: rotateY(0deg);
+        }
+
+
+
     </style>
 
     <script>
-
         $(document).ready(function () {
-
-        })
-
+            $.ajax({
+                type: "GET",
+                url: "http://spartacodingclub.shop/sparta_api/weather/busan",
+                data: {},
+                success: function (response) {
+                    let temp = response['temp']
+                    $('#temp').text(temp)
+                }
+            })
+        });
     </script>
 </head>
 
 <body style="background-color: rgb(10,10,10)">
     <div class="mytitle">
         <h1 class="title">9FLIX</h1>
+        <p class="temperature" align="right" >부산 현재 기온 : <span id="temp">00.0</span>도 </p>
     </div>
 
     <div class="body-box">
-
         <div class="row1">
             <div class="left">
                 <div class="profile"></div>
@@ -304,23 +362,29 @@
     </div>
 
 
-    <div class="wrap person-info">
-    <div>
-        <a href="/dongwoo">
-            <img class="box" src="/static/images/dongwoo.png">
-            <span style="text-align:center; display:inline-block; width:150px">김동우</span></a>
     </div>
-    <div>
-        <a href="/heejeong">
-            <img class="box" src="/static/images/heejeong.png">
-            <span style="text-align:center; display:inline-block; width:150px">김희정</span></a>
+    <div style="width: 1000px; margin: auto;">
+        <p class="sub_title">듬직한 우리 9조대 멤버들</p>
+    <div class="member-box">
+        <div class="container">
+            <div class="item front"><a href="/dongwoo"><img width="100%" src="https://avatars.githubusercontent.com/u/68724828?v=4" alt="img front"/></a></div>
+            <div class="item back"><a href="/dongwoo"><img width="100%" src="https://avatars.githubusercontent.com/u/68724828?v=4" alt="img back"/></a></div>
+            <p align="center" class="font-white text-size"> 김동우 </p>
+        </div>
+        <div class="container">
+            <div class="item front"><a href="/songhee"><img width="100%" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0cb3499b-cf0d-42a2-9a8d-12e508961406%2FKakaoTalk_20220418_160240348.jpg?table=block&id=aba2c27f-31cf-45a0-83d4-16b2bdee649f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=34873ddc-da24-4de9-a671-204842864bd3&cache=v2" alt="img front"/></a></div>
+            <div class="item back"><a href="/songhee"><img width="100%" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0cb3499b-cf0d-42a2-9a8d-12e508961406%2FKakaoTalk_20220418_160240348.jpg?table=block&id=aba2c27f-31cf-45a0-83d4-16b2bdee649f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=34873ddc-da24-4de9-a671-204842864bd3&cache=v2" alt="img back"/></a></div>
+            <p align="center" class="font-white text-size"> 원송희 </p>
+        </div>
+        <div class="container">
+            <div class="item front" align="center"><a href="/jinyoung"><img height="100%" src="https://teamsparta.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faab293e5-e818-4a33-be5f-9e5f209ee76b%2F32154099.jpg?table=block&id=9a6b1aa9-de45-43b4-9361-4d0e1280c2e4&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=290&userId=&cache=v2" alt="img front"/></a></div>
+            <div class="item back"  align="center"><a href="/jinyoung"><img height="100%" src="https://teamsparta.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faab293e5-e818-4a33-be5f-9e5f209ee76b%2F32154099.jpg?table=block&id=9a6b1aa9-de45-43b4-9361-4d0e1280c2e4&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=290&userId=&cache=v2" alt="img back"/></a></div>
+            <p align="center" class="font-white text-size"> 전진영 </p>
+        </div>
     </div>
-    <div>
-        <a href="/songhee">
-            <img class="box" src="/static/images/songhee.png">
-            <span style="text-align:center; display:inline-block; width:150px">원송희</span></a>
     </div>
-</div>
+
+
 </body>
 </html>
 
