@@ -1,10 +1,5 @@
 from flask import Flask, render_template
 import crawling
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
-
 app = Flask(__name__)
 
 # HTML 화면 보여주기
@@ -28,10 +23,6 @@ def jinyung_page():
 
 @app.route('/songhee')
 def songhee_page():
-<<<<<<< Updated upstream
-    result=crawling.result
-    return render_template('songhee.html', result=result)
-=======
     crawling_result=crawling.game15_result
     return render_template('songhee.html',
                            game1=crawling_result[0], game2=crawling_result[1],
@@ -43,7 +34,6 @@ def songhee_page():
                            game13=crawling_result[12], game14=crawling_result[13],
                            game15=crawling_result[14]
                            )
->>>>>>> Stashed changes
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
