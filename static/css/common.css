@@ -142,7 +142,11 @@ body {
     justify-content: center;
 
     margin: auto;
-    margin-top: 200px;
+    margin-top: 50px;
+}
+
+.height150 {
+    height: 150px;
 }
 
 .left {
