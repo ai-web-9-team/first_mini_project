@@ -36,7 +36,7 @@
     <script>
 
         $(document).ready(function () {
-            game_char_info()
+            commnet_listing()
         })
 
         function move_info() {
@@ -44,8 +44,8 @@
             $('html, body').animate({scrollTop: offset.top - 200}, 400);
         }
 
-        function move_song() {
-            var offset = $("#my-song").offset(); //해당 위치 반환
+        function move_comment() {
+            var offset = $("#my-comment").offset(); //해당 위치 반환
             $('html, body').animate({scrollTop: offset.top - 200}, 400);
         }
 
@@ -64,30 +64,63 @@
             $('html, body').animate({scrollTop: offset.top - 200}, 400);
         }
 
-        function game_char_info() {
+        function commnet_listing() {
+            $('#comment-box').empty()
             $.ajax({
                 type: 'GET',
-                url: '/dongwoo/game',
+                url: '/dongwoo/comment?id=김동우',
                 data: {},
                 success: function (response) {
-                    console.log(response)
+                    let comments = response['comments']
+                    for(let i=0; i<comments.length;i++){
+                        let name = comments[i]['name']
+                        let comment = comments[i]['comment']
+
+                        let temp_html = `<div id="comment-row" class="comment-row">
+                                            <p class="text-size-20">${name}</p>
+                                            <p class="text-size">${comment}</p>
+                                        </div>`
+                        $('#comment-box').append(temp_html)
+                    }
+
                 }
             })
         }
 
+        function comment_save(member) {
+            let name = $('#comment-name').val()
+            let comment = $('#comment-detail').val()
+
+             $.ajax({
+                type: 'POST',
+                url: '/dongwoo/comment',
+                data: {
+                    name_give: name,
+                    comment_give: comment,
+                    member_give: member
+                },
+                success: function (response) {
+                   console.log(response['msg'])
+                }
+            })
+            commnet_listing()
+        }
+
     </script>
 </head>
+
 <body style="background-color:rgb(20,20,20);">
 <div class="mytitle">
     <h1 class="main_title">꾸러기 <span class="red">9조대</span></h1>
     <div class="sub_title tap-btns">
         <span style="color: gray; cursor:pointer;" onclick="move_info()">기본 정보</span>
-        <span style="color: lightcoral; cursor:pointer;" onclick="move_song()">내가 좋아하는 노래</span>
         <span style="color: dodgerblue; cursor:pointer;" onclick="move_merit()">객관적으로 살펴본 나의 장점</span>
         <span style="color: peru; cursor:pointer;" onclick="move_style()">협업을 하는 과정에서의 나의 스타일</span>
-        <span style="color: gray; cursor:pointer;" onclick="move_members()">멤버들</span></div>
+        <span style="color: gray; cursor:pointer;" onclick="move_members()">멤버들</span>
+        <span style="color: black; cursor:pointer;" onclick="move_comment()">댓글달기</span>
+    </div>
 </div>
-<div class="row1">
+<div class="row1" style="z-index: 1">
     <div class="left">
         <div class="container-box2">
             <div class="container">
@@ -131,11 +164,9 @@
 </div>
 
 <div class="row5">
-    <div class="width100"></div>
-    <div class="width100"></div>
-    <div class="game-char"></div>
-    <div class="width100"></div>
-    <div class="game-char-info">
+    <div class="left"><div class="game-char"></div></div>
+    <div class="right">
+        <div class="game-char-info">
         <p class="sub_title char-sub-title">게 임 캐 릭 터 정 보</p>
         <div class="person-info font-white">
             <p>ID : 바람의나라에서온모험가</p>
@@ -145,7 +176,8 @@
             <p>로아와 : <a href="https://loawa.com/char/바람의나라에서온모험가">https://loawa.com/char/바람의나라에서온모험가</a></p>
         </div>
     </div>
-    <div class="width100"></div>
+    </div>
+    <div class="width10"></div>
 </div>
 
 <div class="row3">
@@ -187,10 +219,7 @@
             저 또한 어려운 일도 쉽게 풀어서 설명하고 해결하는 능력을 기를 수 있었습니다.</p>
     </div>
 </div>
-<p></p>
-</div>
 
-</div>
 <div style="width: 1000px; margin: auto;">
     <p id="my-members" class="font-white sub_title" style="color: gray;"> 듬직한 우리 <span class="red">9조대</span> 멤버들</p>
     <div class="member-box">
@@ -218,6 +247,41 @@
     </div>
 </div>
 
+<div class="row6">
+    <div style="width: 60%; margin: auto">
+        <p class="sub_title" style="color: black;" id="my-comment">댓글 달기</p>
+
+        <form class="text-size">
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="font-white">이 름</label>
+                <input type="text" class="form-control" id="comment-name" placeholder="이 름">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1" class="font-white">댓 글</label>
+                <textarea class="form-control" id="comment-detail" rows="2" placeholder="댓 글"></textarea>
+            </div>
+        </form>
+        <button type="submit" class="btn btn-secondary btn-submit" onclick="comment_save('김동우')">저 장</button>
+
+        <div id="comment-box" style="margin-top: 100px;">
+            <div id="comment-row" class="comment-row">
+                <p class="text-size-20">아이디</p>
+                <p class="text-size">댓글 내용</p>
+            </div>
+            <div id="comment-row" class="comment-row">
+                <p class="text-size-20">아이디</p>
+                <p class="text-size">댓글 내용</p>
+            </div>
+            <div id="comment-row" class="comment-row">
+                <p class="text-size-20">아이디</p>
+                <p class="text-size">댓글 내용</p>
+            </div>
+        </div>
+
+    </div>
+
+</form>
+</div>
 
 </body>
 </html>

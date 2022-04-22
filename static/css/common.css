@@ -98,9 +98,245 @@ body {
     font-size: 30px
 }
 
+.text-size-20 {
+    font-size: 25px
+}
+
 .sub_title {
     font-weight: bold;
     font-size: 40px;
     text-align: center;
     text-shadow: -1px 0 #FFF, 0 1px #FFF, 1px 0 #FFF, 0 -1px #FFF;
+}
+
+
+
+.mytitle {
+    width: 100%;
+    height: 150px;
+
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c0d816b2-70fd-4507-a49c-2faadd059b2b/dciwqeq-595ccd60-6536-4619-bc44-7baa8d7ec0ce.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MwZDgxNmIyLTcwZmQtNDUwNy1hNDljLTJmYWFkZDA1OWIyYlwvZGNpd3FlcS01OTVjY2Q2MC02NTM2LTQ2MTktYmM0NC03YmFhOGQ3ZWMwY2UucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._Rzlmz5ti3E0-2jCFsIcTGr6lVq9dObuD_DB7_jIOME');
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0px;
+
+    z-index: 2;
+}
+
+.row1 {
+
+    width: 1000px;
+    /*background: red;*/
+    height: 450px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+    margin-top: 200px;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+    /*background-color: red;*/
+}
+
+.profile {
+    width: 80%;
+    height: 100%;
+    background-image: url("https://avatars.githubusercontent.com/u/68724828?v=4");
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 20px;
+
+    z-index: 1;
+}
+
+.right {
+    /*background: red;*/
+    width: 40%;
+    height: 100%;
+}
+
+.main_title{
+    font-size: 70px; color:green;
+    text-shadow: -1px 0 #FFF, 0 1px #FFF, 1px 0 #FFF, 0 -1px #FFF;
+}
+
+.person-info {
+    font-size: 30px;
+}
+
+.row2 {
+    width: 1000px;
+    /*background: red;*/
+    height: 300px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+    margin-top: 100px;
+}
+
+.youtube {
+    width: 40%
+}
+
+.row3 {
+    width: 1200px;
+    /*background: red;*/
+    height: 600px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 100px;
+    margin: auto;
+}
+
+.row4 {
+    width: 1200px;
+    /*background: red;*/
+    height: 700px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 50px;
+    margin: auto;
+    margin-bottom: 200px;
+
+}
+
+.game-img {
+    width: 80%;
+    height: 350px;
+    background-image: url('../images/mokoko.png');
+    /*background-image: url("https://velog.velcdn.com/images/kimphysicsman/post/1a598ff5-6cd6-4342-8f65-ebcde88bed81/image.png");*/
+    background-size: cover;
+    background-position: center center;
+
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.calli-img{
+    width: 80%;
+    height: 100%;
+
+    background-image: url('../images/calligraphy.png');
+    /*background-image: url("https://velog.velcdn.com/images/kimphysicsman/post/d08f4508-5cac-4053-b3ed-b72f44569b19/image.png");*/
+    background-size: cover;
+    background-position: center center;
+
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.tap-btns{
+    width: 1050px;
+    /*background-color: green;*/
+
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row5 {
+    width: 1000px;
+    /*background: red;*/
+    height: 400px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.game-char{
+    width: 80%;
+    height: 100%;
+    background-image: url("https://velog.velcdn.com/images/kimphysicsman/post/d1c4dc71-bb9b-4e9d-acbf-86d9a0efa60f/image.png");
+    background-size: cover;
+    background-position: center center;
+
+    border-radius: 20px;
+    /*margin-top: 50px;*/
+}
+
+.game-char-info{
+    width: 100%;
+    height: 100%
+}
+
+.width10 {
+    width: 10%;
+    /*background-color: blue;*/
+}
+
+.width100 {
+    width: 100px;
+    /*background-color: blue;*/
+}
+
+.char-sub-title{
+    width: 400px
+}
+
+.container-box2 {
+    width: 80%;
+    height: 70%;
+    /*background-color: blue;*/
+    /*margin: auto;*/
+    margin-top: 50px;
+}
+
+.row6 {
+    width: 1000px;
+    /*background: red;*/
+
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.btn-submit {
+    font-size: 30px;
+    padding: 0px 30px 0px 30px;
+}
+
+.comment-row {
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px 0px 10px 0px;
+    padding: 20px;
 }
