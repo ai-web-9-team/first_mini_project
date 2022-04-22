@@ -7,6 +7,7 @@
 
     <title>SONGFLIX</title>
 
+    <link rel="shortcut icon" href="https://blog.kakaocdn.net/dn/brBCoz/btrzYir31Vp/SyK2YsGeApVae2t9vsZ7A0/img.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
@@ -29,7 +30,6 @@
     }
     return 0
     }
-
 
     </SCRIPT>
 
@@ -164,9 +164,15 @@ ul{
     list-style: none;
 }
 
+    .mainProfile {
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
     .myPic {
         width: 400px;
-        height: 400px;
+        height: 450px;
         perspective: 800px;
         padding-top: 50px;
         padding-left: 35px;
@@ -176,13 +182,13 @@ ul{
 
     .myPic .item {
         width: 400px;
-        height: 400px;
+        height: 450px;
         border: 1px solid black;
         backface-visibility: hidden;
         transition: 1s;
     }
 
-.myPic .item.front {
+    .myPic .item.front {
         position: absolute;
         transform: rotateY(0deg);
     }
@@ -206,14 +212,14 @@ ul{
         margin-top: 20px;
         color: white;
         font-size: 25px;
+
     }
 
     .detail {
+        padding-top: 20px;
         width: 100%;
         height: 300px;
         color: white;
-        background: green;
-        font-size: 20px;
     }
 
     .left {
@@ -487,6 +493,7 @@ ul{
 
 
 
+
     </style>
 
 
@@ -497,7 +504,8 @@ ul{
    $(document).ready(function(){
       $('#lolbutton').click(function(){
          var offset = $('#loldiv').offset();
-           $('html').animate({scrollTop : offset.top}, 600);
+         $('html').animate({scrollTop : offset.top}, 600);
+         $("#gameInfo").show(2000);
       });
    });
 
@@ -576,6 +584,7 @@ ul{
 
 
 
+
     </script>
 </head>
 
@@ -614,6 +623,7 @@ ul{
                 <SCRIPT LANGUAGE=JAVASCRIPT TYPE="TEXT/JAVASCRIPT">
 document.write("Total <font color=red>"+hitCt+" </font>")
 
+
                 </SCRIPT>
             </li>
         </ul>
@@ -622,45 +632,56 @@ document.write("Total <font color=red>"+hitCt+" </font>")
 
 </div>
 
-<div class="myPic">
-    <div class="item front"><img
-            src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0cb3499b-cf0d-42a2-9a8d-12e508961406%2FKakaoTalk_20220418_160240348.jpg?table=block&id=aba2c27f-31cf-45a0-83d4-16b2bdee649f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=34873ddc-da24-4de9-a671-204842864bd3&cache=v2"
-            width=400 height=400></div>
-    <div class="item back"><img
-            src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FnrGzN%2Fbtrz0EgTxKD%2FXCqiz6FpEGS2NhEqiCJDRk%2Fimg.jpg"
-            width=400 height=400 alt="img back"/></div>
-</div>
+<div class="mainProfile">
+    <div class="myPic">
+        <div class="item front"><img
+                src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0cb3499b-cf0d-42a2-9a8d-12e508961406%2FKakaoTalk_20220418_160240348.jpg?table=block&id=aba2c27f-31cf-45a0-83d4-16b2bdee649f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=34873ddc-da24-4de9-a671-204842864bd3&cache=v2"
+                width=400 height=450></div>
+        <div class="item back"><img
+                src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FnrGzN%2Fbtrz0EgTxKD%2FXCqiz6FpEGS2NhEqiCJDRk%2Fimg.jpg"
+                width=400 height=450 alt="img back"/></div>
+    </div>
 
-<div class="myInfo">
-    <div class="slide">
-        <h1>간단 프로필</h1>
-        <div>
-            <p>
-            <li><B>이름: 원송희</B></li>
-            </p>
-            <p>
-            <li><B>MBTI: ENFP</B></li>
-            </p>
-            <p>
-            <li><B>취미: 롤, 노래 듣기, 애니메이션 감상</B></li>
-            </p>
-            <p>
-            <li><B>특기: 일본어</B></li>
-            </p>
-            <p>
-            <li><B>자기소개 뭐 아무거나 하나</B></li>
-            </p>
+    <div class="myInfo">
+        <div class="slide">
+            <h1>간단 프로필</h1>
+            <div>
+                <p>
+                <li><B>이름: 원송희</B></li>
+                </p>
+                <p>
+                <li><B>MBTI: ENFP</B></li>
+                </p>
+                <p>
+                <li><B>취미: 롤, 노래 듣기, 애니메이션 감상</B></li>
+                </p>
+                <p>
+                <li><B>특기: 일본어</B></li>
+                </p>
+                <p>
+                <li><B>자기소개 뭐 아무거나 하나</B></li>
+                </p>
+            </div>
         </div>
     </div>
 </div>
-
 <div class="detail">
     <div>
         <div class="left">
-            <p>자기소개</p>
+            <h1>
+                <li>객관적으로 보는 나의 장점</li>
+            </h1>
+            <h2>1. 어느 성격의 사람이든지 간에 잘 어울려 지낸다.</h2>
+            <h2>2. 까다로운 구석이 없어 편하게 대할 수 있다.</h2>
+            <h2>3. 재밌게 잘 논다.</h2>
         </div>
         <div class="right">
-            <p>자기소개</p>
+            <h1>
+                <li>협업할 때 나의 스타일</li>
+            </h1>
+            <h2>1. 답장은 미루지 않고 최대한 빠르게 한다.</h2>
+            <h2>2. 처음부터 세부적인 계획을 짜기보다는 큰 계획 틀만 짜두고 일정에 맞게 세부 계획을 수정해나간다.</h2>
+
         </div>
     </div>
 
@@ -676,7 +697,7 @@ document.write("Total <font color=red>"+hitCt+" </font>")
     <CENTER><B>제 최근 15게임의 전적입니다!</CENTER>
     </B></p>
 </div>
-<div class="lolInfo">
+<div class="lolInfo" id="gameInfo">
     <p>
     <CENTER>{{game1}}</CENTER>
     </p>
