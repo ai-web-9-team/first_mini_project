@@ -10,7 +10,7 @@ soup = BeautifulSoup(data.text, 'html.parser')
 
 ### 승패 ###
 #__next > div.css-19ozhet.e1sjz9pt1 > div.css-1sq1kbv.e3mqlfu0 > ul > li:nth-child(1) > div > div.info > div.game-result
-#__next > div.css-19ozhet.e1sjz9pt1 > div.css-1sq1kbv.e3mqlfu0 > ul > li:nth-child(2) > div > div.info > div.game-result
+#__next > div.css-19ozhet.e1sjz9pt1 > div.css-1sq1kbv.e3mqlfu0 > ul > li:nth-child(3) > div > div.info > div.game-result
 
 ### kda ###
 #__next > div.css-19ozhet.e1sjz9pt1 > div.css-1sq1kbv.e3mqlfu0 > ul > li:nth-child(1) > div > div.kda > div.k-d-a
@@ -23,11 +23,8 @@ soup = BeautifulSoup(data.text, 'html.parser')
 
 games=soup.select("#__next > div.css-19ozhet.e1sjz9pt1 > div.css-1sq1kbv.e3mqlfu0 > ul > li")
 result=[]
-<<<<<<< Updated upstream
-for i in range(20):
-=======
+
 for i in range(15):
->>>>>>> Stashed changes
     winOrLose=games[i].select_one("div > div.info > div.game-result")
     kda=games[i].select_one("div > div.kda > div.k-d-a")
     champion=games[i].select_one("div > div.champion > div.name")
@@ -36,15 +33,16 @@ for i in range(15):
     #print(playTime.text)
     #print(champion.text)
     #print(when.text)
-<<<<<<< Updated upstream
-    result.append([winOrLose.text, kda.text, champion.text, when.text]) # 플라스크 연결은 나중에 하자...
-=======
     result.append([winOrLose.text, kda.text, champion.text, when.text])
+
+champion_dic={"Lux": "럭스", "Janna": "잔나", "Caitlyn": "케이틀린", "Jinx": "징크스",
+              "Draven": "드레이븐", "Soraka": "소라카"} # 나중에 더 추가하자.. 일단은 모스트챔만
+
 
 game15_result=[]
 for r in result:
     pretty_result = ""
-    pretty_result+=r[2]
+    pretty_result+=champion_dic[r[2]]
     pretty_result+=" "
     pretty_result+="챔피언으로 "
     temp=list(map(int, r[1].split("/")))
@@ -52,10 +50,9 @@ for r in result:
     death=str(temp[1])+"데스 "
     assist=str(temp[2])+"어시"
     pretty_result+=kill+death+assist
-    pretty_result+="를 하고 "
+    pretty_result+="로 "
     if r[0]=="Victory":
-        pretty_result+="승리했습니다!! ^_^"
+        pretty_result+="✌ 캐뤼했습니다 ✌"
     else:
-        pretty_result+="패배했습니다.. ㅠ_ㅠ"
+        pretty_result+="🤬 패배했습니다 🤬"
     game15_result.append(pretty_result)
->>>>>>> Stashed changes
