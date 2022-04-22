@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!-- Required meta tags -->
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -30,7 +30,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poor+Story&display=swap" rel="stylesheet">
 
 
-
     <title>김희정 자기소개</title>
     <style>
         * {
@@ -47,7 +46,6 @@
             background-position: center;
             background-size: cover;
 
-            color: red;
 
             display: flex;
             flex-direction: column;
@@ -55,6 +53,16 @@
             justify-content: center;
         }
 
+        .title {
+            color: red;
+            font-size: 50px;
+        }
+
+        .temperature {
+            color: white;
+
+
+        }
 
         .body-box {
             /*background: green;*/
@@ -99,7 +107,7 @@
             height: 100%;
         }
 
-        .sub_title{
+        .sub_title {
             color: white;
             font-weight: bold;
             font-size: 40px;
@@ -163,17 +171,19 @@
 
         details {
             width: 1000px;
-            height:500px;
+            height: 500px;
             margin-bottom: 1rem;
         }
+
         details > summary {
-            background: rgb(10,10,10);
+            background: rgb(10, 10, 10);
             padding: 1rem;
             outline: 0;
             border-radius: 5px;
             cursor: pointer;
             transition: background 0.5s;
         }
+
         details > summary::-webkit-details-marker {
             background: url(https://marshall-storage.tistory.com/attachment/cfile29.uf@993E16335F785C0037CB43.svg) no-repeat center;
             background-size: contain;
@@ -181,15 +191,19 @@
             transform: rotate3d(0, 0, 1, 90deg);
             transition: transform 0.25s;
         }
+
         details[open] > summary::-webkit-details-marker {
             transform: rotate3d(0, 0, 1, 180deg);
         }
+
         details[open] > summary {
-            background: rgb(10,10,10);
+            background: rgb(10, 10, 10);
         }
+
         details[open] > summary ~ * {
             animation: reveal 0.5s;
         }
+
         @keyframes reveal {
             from {
                 opacity: 0;
@@ -203,124 +217,191 @@
         }
 
 
-        .wrap {
+        .member-box {
+            /*background: green;*/
+            width: 100%;
+            height: 300px;
+
+            margin: 0px auto 50px auto;
+
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: center;
-            margin-top: 20px;
+            justify-content: space-evenly;
         }
-        .content img {
-            width: 100px;
+
+        body {
+            padding: 0px 20px 20px 20px;
         }
+
+        .container {
+            /*background: red;*/
+            width: 200px;
+            height: 300px;
+            perspective: 300px;
+            justify-content: space-between;
+        }
+
+        .container .item {
+            width: 200px;
+            height: 200px;
+            /*border: 1px solid #828282;*/
+            font-size: 35px;
+            backface-visibility: hidden;
+            transition: 1s;
+        }
+
+        .container .item.front {
+            position: absolute;
+            transform: rotateY(0deg);
+        }
+
+        .container:hover .item.front {
+            transform: rotateY(180deg);
+        }
+
+        .container .item.back {
+            transform: rotateY(-180deg);
+        }
+
+        .container:hover .item.back {
+            transform: rotateY(0deg);
+        }
+
+
     </style>
 
     <script>
-
         $(document).ready(function () {
-
-        })
-
+            $.ajax({
+                type: "GET",
+                url: "http://spartacodingclub.shop/sparta_api/weather/busan",
+                data: {},
+                success: function (response) {
+                    let temp = response['temp']
+                    $('#temp').text(temp)
+                }
+            })
+        });
     </script>
 </head>
 
 <body style="background-color: rgb(10,10,10)">
-    <div class="mytitle">
-        <h1 class="title">9FLIX</h1>
+<div class="mytitle">
+    <h1 class="title">9FLIX</h1>
+    <p class="temperature" align="right">부산 현재 기온 : <span id="temp">00.0</span>도 </p>
+</div>
+
+<div class="body-box">
+    <div class="row1">
+        <div class="left">
+            <div class="profile"></div>
+        </div>
+        <div class="right person-info">
+            <p class="sub_title">기 본 정 보</p>
+            <p>이름 : 김희정</p>
+            <p>MBTI : INFP(인프피인게...싫음)</p>
+            <p>관심사 : IT, 산책, 가족, 식물, 과일, 건강</p>
+            <p>취미 : 피아노, 산책하기</p>
+            <p>좋아하는 음악 : 인디밴드음악 </p>
+            <p>특징 : 꽹과리 신명나게 잘치지만 정적인걸 좋아함</p>
+            <p>블로그 : <a href="https://khjhj3808.tistory.com/">https://khjhj3808.tistory.com/</a></p>
+        </div>
     </div>
 
-    <div class="body-box">
-
-        <div class="row1">
-            <div class="left">
-                <div class="profile"></div>
-            </div>
-            <div class="right person-info">
-                <p class="sub_title">기 본 정 보</p>
-                <p>이름 : 김희정</p>
-                <p>MBTI : INFP(인프피인게...싫음)</p>
-                <p>관심사 : IT, 산책, 가족, 식물, 과일, 건강</p>
-                <p>취미 : 피아노, 산책하기</p>
-                <p>좋아하는 음악 : 인디밴드음악 </p>
-                <p>특징 : 꽹과리 신명나게 잘치지만 정적인걸 좋아함</p>
-                <p>블로그 : <a href="https://khjhj3808.tistory.com/">https://khjhj3808.tistory.com/</a></p>
+    <div class="row2">
+        <div class="left">
+            <div id="youtube" class="youtube">
+                <iframe width="400" height="220" src="https://www.youtube.com/embed/QfWV8nl76UY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
             </div>
         </div>
 
-        <div class="row2">
-            <div class="left">
-                <div id="youtube" class="youtube">
-                    <iframe width="400" height="400" src="https://www.youtube.com/embed/VHj6IYA-Dxs"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-
-            <div class="right">
-                <p class="sub_title">내가 제일 좋아하는 노래</p>
-                <p class="person-info"> 데이먼스 이어 (Damons Year) - yours </p>
-                <p class="text-size"> 이유 : 가사가 좋아요</p>
-                <p class="text-size"> <br>내가 손을 잡을게, 너는 힘을 빼도 돼
-                                    그저 복사꽃 핀 거릴 걷자</br>
-                                    <br>너의 마음이 녹아 우리 밤을 합치면
-                                    무너진 달을 세워놓자</br>
-                                    <br>가끔 너의 모습은 봄날의 낮과 밤 같아
-                                    따스하다가도 차갑곤 해</br>
-                </p>
-            </div>
+        <div class="right">
+            <p class="sub_title">내가 제일 좋아하는 노래</p>
+            <p class="person-info"> 데이먼스 이어 (Damons Year) - yours </p>
+            <p class="text-size"> 이유 : 가사가 좋아요</p>
+            <p class="text-size"><br>내가 손을 잡을게, 너는 힘을 빼도 돼
+                그저 복사꽃 핀 거릴 걷자</br>
+                <br>너의 마음이 녹아 우리 밤을 합치면
+                무너진 달을 세워놓자</br>
+                <br>가끔 너의 모습은 봄날의 낮과 밤 같아
+                따스하다가도 차갑곤 해</br>
+            </p>
         </div>
+    </div>
 
-        <div class="row3">
-            <details>
-              <summary class="sub_title">객관적으로 살펴본 자신의 장점</summary>
-              <div>
+    <div class="row3">
+        <details>
+            <summary class="sub_title">객관적으로 살펴본 자신의 장점</summary>
+            <div>
                 <li class="person-info">다른 사람의 말에 공감을 잘한다!</li>
                 <p class="text-size"> 현실적인 해결책은 제시해주지 못하지만 같이 공감해주고 위로해 주는 친구의 역할을 하는 편이다.
-                                    어색한 사이인 친구와 집가는 방향이 같아 같이 간적이 몇 번 있는데 버스에서
-                                    친구의 인생 스토리를 거의 다 알게 되었다. 듣기만 했을 뿐인데 고맙다는 이야기도 듣고
-                                    진심으로 공감하는 것만으로도 도움이 되는 걸 그때 알았던 것 같다.</p>
+                    어색한 사이인 친구와 집가는 방향이 같아 같이 간적이 몇 번 있는데 버스에서
+                    친구의 인생 스토리를 거의 다 알게 되었다. 듣기만 했을 뿐인데 고맙다는 이야기도 듣고
+                    진심으로 공감하는 것만으로도 도움이 되는 걸 그때 알았던 것 같다.</p>
                 <li class="person-info">호기심이 많아 배우는 걸 좋아한다!</li>
                 <p class="text-size">흥미가 생기면 일단 배워보고 싶어 한다.
                     꾸준히가 안되는게 단점이라 시작할 때 목표를 정하고 시작한다.
                     고등학교 때 사물놀이를 배웠는데 개교3년 된 학교의 동아리 부흥과 팀원의 실력 향상을 위해 동아리 연합회도 가입하고
                     사물놀이 경연에 구경가서 제일 잘하는 학교와 컨택하여 여름방학 특훈을 받은 경험이 있다.</p>
-              </div>
-            </details>
-        </div>
-
-        <div class="row4">
-            <details>
-              <summary class="sub_title">협업을 하는 과정에서의 자신의 스타일</summary>
-                <figure>
-                <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F097f45dd-0fd6-4641-8ef9-995c51c14343%2F%EB%82%B4%EC%82%AC%EC%A7%842.jpg?table=block&id=6796dcb1-dfcd-4c2a-a64b-22e72ddf147c&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=f57b5070-a025-4f62-84f9-2a0ec9fcdd5c&cache=v2" alt="flowers" width="350" height="263">
-                </figure>
-
-                <p class="text-size">의견을 주고 받을 때에도 소외되는 사람 없이 의견들이 잘 융화 되도록 하는 것이
-                                    협업을 할 때 가장 중요한 점이라고 생각한다.</p>
-
-            </details>
-         </div>
+            </div>
+        </details>
     </div>
 
+    <div class="row4">
+        <details>
+            <summary class="sub_title">협업을 하는 과정에서의 자신의 스타일</summary>
+            <figure>
+                <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F097f45dd-0fd6-4641-8ef9-995c51c14343%2F%EB%82%B4%EC%82%AC%EC%A7%842.jpg?table=block&id=6796dcb1-dfcd-4c2a-a64b-22e72ddf147c&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=f57b5070-a025-4f62-84f9-2a0ec9fcdd5c&cache=v2"
+                     alt="flowers" width="350" height="263">
+            </figure>
 
-    <div class="wrap person-info">
-    <div>
-        <a href="/dongwoo">
-            <img class="box" src="/static/images/dongwoo.png">
-            <span style="text-align:center; display:inline-block; width:150px">김동우</span></a>
-    </div>
-    <div>
-        <a href="/heejeong">
-            <img class="box" src="/static/images/heejeong.png">
-            <span style="text-align:center; display:inline-block; width:150px">김희정</span></a>
-    </div>
-    <div>
-        <a href="/songhee">
-            <img class="box" src="/static/images/songhee.png">
-            <span style="text-align:center; display:inline-block; width:150px">원송희</span></a>
+            <p class="text-size">의견을 주고 받을 때에도 소외되는 사람 없이 의견들이 잘 융화 되도록 하는 것이
+                협업을 할 때 가장 중요한 점이라고 생각한다.</p>
+
+        </details>
     </div>
 </div>
+
+
+</div>
+<div style="width: 1000px; margin: auto;">
+    <p class="sub_title">듬직한 우리 9조대 멤버들</p>
+    <div class="member-box">
+        <div class="container">
+            <div class="item front"><a href="/dongwoo"><img width="100%"
+                                                            src="https://avatars.githubusercontent.com/u/68724828?v=4"
+                                                            alt="img front"/></a></div>
+            <div class="item back"><a href="/dongwoo"><img width="100%"
+                                                           src="https://avatars.githubusercontent.com/u/68724828?v=4"
+                                                           alt="img back"/></a></div>
+            <p align="center" class="font-white text-size"> 김동우 </p>
+        </div>
+        <div class="container">
+            <div class="item front"><a href="/songhee"><img width="100%"
+                                                            src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0cb3499b-cf0d-42a2-9a8d-12e508961406%2FKakaoTalk_20220418_160240348.jpg?table=block&id=aba2c27f-31cf-45a0-83d4-16b2bdee649f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=34873ddc-da24-4de9-a671-204842864bd3&cache=v2"
+                                                            alt="img front"/></a></div>
+            <div class="item back"><a href="/songhee"><img width="100%"
+                                                           src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0cb3499b-cf0d-42a2-9a8d-12e508961406%2FKakaoTalk_20220418_160240348.jpg?table=block&id=aba2c27f-31cf-45a0-83d4-16b2bdee649f&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=34873ddc-da24-4de9-a671-204842864bd3&cache=v2"
+                                                           alt="img back"/></a></div>
+            <p align="center" class="font-white text-size"> 원송희 </p>
+        </div>
+        <div class="container">
+            <div class="item front" align="center"><a href="/jinyoung"><img height="100%"
+                                                                            src="https://teamsparta.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faab293e5-e818-4a33-be5f-9e5f209ee76b%2F32154099.jpg?table=block&id=9a6b1aa9-de45-43b4-9361-4d0e1280c2e4&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=290&userId=&cache=v2"
+                                                                            alt="img front"/></a></div>
+            <div class="item back" align="center"><a href="/jinyoung"><img height="100%"
+                                                                           src="https://teamsparta.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faab293e5-e818-4a33-be5f-9e5f209ee76b%2F32154099.jpg?table=block&id=9a6b1aa9-de45-43b4-9361-4d0e1280c2e4&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=290&userId=&cache=v2"
+                                                                           alt="img back"/></a></div>
+            <p align="center" class="font-white text-size"> 전진영 </p>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>
 
