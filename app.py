@@ -2,8 +2,8 @@ from flask import Flask, render_template, jsonify, request
 import crawling
 from pymongo import MongoClient
 
-# client = MongoClient('mongodb://test:test@localhost', 27017)
-client = MongoClient('localhost', 27017)
+client = MongoClient('mongodb://test:test@localhost', 27017)
+# client = MongoClient('localhost', 27017)
 db = client.db9jo
 
 
