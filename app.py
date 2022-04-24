@@ -28,6 +28,7 @@ def jinyung_page():
 
 @app.route('/songhee')
 def songhee_page():
+    exec("crawling.py")
     crawling_result=crawling.game15_result
     return render_template('songhee.html',
                            game1=crawling_result[0], game2=crawling_result[1],
