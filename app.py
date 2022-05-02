@@ -2,13 +2,13 @@ from flask import Flask, render_template, jsonify, request
 import crawling
 from pymongo import MongoClient
 
-client = MongoClient('mongodb://test:test@localhost', 27017)
-# client = MongoClient('localhost', 27017)
+# client = MongoClient('mongodb://test:test@localhost', 27017)
+client = MongoClient('localhost', 27017)
 db = client.db9jo
 
 
 app = Flask(__name__)
-
+exec("crawling")
 # HTML 화면 보여주기
 @app.route('/')
 def home():
@@ -28,7 +28,6 @@ def jinyung_page():
 
 @app.route('/songhee')
 def songhee_page():
-    exec("crawling.py")
     crawling_result=crawling.game15_result
     return render_template('songhee.html',
                            game1=crawling_result[0], game2=crawling_result[1],
