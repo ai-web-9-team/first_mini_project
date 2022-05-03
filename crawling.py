@@ -38,7 +38,7 @@ for i in range(15):
 champion_dic={"Lux": "럭스", "Janna": "잔나", "Caitlyn": "케이틀린", "Jinx": "징크스",
               "Draven": "드레이븐", "Soraka": "소라카", "Xayah": "자야", "Quinn": "퀸",
               "Sylas": "사일러스", "Yuumi": "유미", "Vex": "벡스", "Sivir": "시비르",
-              "Karthus": "카서스", "Vayne": "베인", "Seraphine": "세라핀"} # 나중에 더 추가하자.. 일단은 모스트챔만
+              "Karthus": "카서스", "Vayne": "베인", "Seraphine": "세라핀", "Veigar": "베이가"} # 나중에 더 추가하자.. 일단은 모스트챔만
 
 
 game15_result=[]
